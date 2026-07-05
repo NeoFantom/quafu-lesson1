@@ -1,0 +1,17 @@
+HTTP/1.1 200 Connection established
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 05 Jul 2026 16:02:40 GMT
+Content-Type: text/html
+Last-Modified: Wed, 17 Jun 2026 06:53:30 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+ETag: W/"6a32446a-c6c4"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=15552000
+Content-Encoding: gzip
+
