@@ -1,0 +1,10 @@
+# OMX runtime state/logs (keep context snapshots versioned)
+.omx/*
+!.omx/context/
+!.omx/context/**
+
+# local runtime artifacts
+.DS_Store
+node_modules/
+.cache/
+.tmp/
