@@ -8,3 +8,6 @@
 node_modules/
 .cache/
 .tmp/
+# Raw browser captures may include account-specific UI. Public pages only use
+# sanitized copies under site/assets/screenshots/.
+sources/raw/platform-screens/
