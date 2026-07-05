@@ -35,11 +35,18 @@ if [ -d "$SITE" ]; then
     pass "public files exclude disallowed competition scope"
   fi
 
-  if grep -RInE '(sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|api[_-]?key\s*[:=]\s*["'"'']?[A-Za-z0-9_-]{16,}|token\s*[:=]\s*["'"'']?[A-Za-z0-9_-]{20,}|password\s*[:=])' $public_text_files >/tmp/quafu-secrets.txt 2>/dev/null; then
+
+  repo_text_files=$(find "$ROOT" \
+    -path "$ROOT/.git" -prune -o \
+    -path "$ROOT/.omx" -prune -o \
+    -path "$ROOT/node_modules" -prune -o \
+    -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.md' -o -name '*.json' -o -name '*.sh' -o -name '*.txt' -o -name '*.py' \) \
+    -print | sort)
+  if grep -InE '(sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|api[_-]?key\s*[:=]\s*["'"'']?[A-Za-z0-9_-]{16,}|token\s*[:=]\s*["'"'']?[A-Za-z0-9_-]{20,}|password\s*[:=])' $repo_text_files >/tmp/quafu-secrets.txt 2>/dev/null; then
     cat /tmp/quafu-secrets.txt >&2
-    fail "public files contain no credential-looking strings"
+    fail "repository text files contain no credential-looking strings"
   else
-    pass "public files contain no credential-looking strings"
+    pass "repository text files contain no credential-looking strings"
   fi
 
   python3 - "$SITE" <<'PY'
