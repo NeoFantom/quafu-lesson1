@@ -1,12 +1,12 @@
 {
   "name": "quafu-lesson1-static",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Dependency-light static tutorial scaffold and validation guardrails for Quafu Lesson 1.",
+  "description": "Dependency-light static tutorial and validation guardrails for Quafu Lesson 1.",
   "scripts": {
-    "lint": "./scripts/validate.sh",
-    "test": "./scripts/smoke.sh",
+    "lint": "node scripts/validate.mjs",
+    "test": "./scripts/smoke-local.sh",
     "typecheck": "node -e \"console.log('PASS: no TypeScript sources; static HTML/CSS/JS project')\"",
-    "validate": "./scripts/validate.sh && ./scripts/smoke.sh"
+    "validate": "npm run lint && npm run typecheck && npm test"
   }
 }

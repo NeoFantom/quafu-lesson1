@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-07-06T00:03:00+08:00",
+  "source_url": "https://quafu-sqc.baqis.ac.cn/framework/home",
+  "evidence_files": [
+    "sources/raw/platform/nav/extract-7.md",
+    "sources/raw/platform/nav/extract-11.md",
+    "sources/raw/platform/nav/extract-13.md",
+    "sources/raw/platform/nav/extract-15.md"
+  ],
+  "participant_features": [
+    {
+      "area": "Home",
+      "evidence": "Statistics, personal resources, task statistics, available QPUs, queue, qubits, couplers, median 1Q/2Q error.",
+      "lesson_use": "Post-login orientation and backend selection."
+    },
+    {
+      "area": "Jupyter",
+      "evidence": "Jupyter route exists and may show a loading state while the server starts.",
+      "lesson_use": "Optional account environment; not required for the first SDK demo."
+    },
+    {
+      "area": "Composer",
+      "evidence": "Operations palette, circuit wires, OpenQASM panel, output state panel.",
+      "lesson_use": "Build visual intuition and connect gates to OpenQASM."
+    },
+    {
+      "area": "Tasks",
+      "evidence": "Task ID, Task Name, Chip, Status, Submit Time table fields and pagination controls.",
+      "lesson_use": "Monitor submitted cloud jobs and find results by task id."
+    },
+    {
+      "area": "User",
+      "evidence": "User Info, JupyterLab server, Update Password tabs.",
+      "lesson_use": "Account orientation without exposing personal values."
+    }
+  ],
+  "redaction_policy": "Account identifiers, tokens, event-specific entries, organizer-only entries, and raw screenshots are excluded from committed public-ready evidence."
+}

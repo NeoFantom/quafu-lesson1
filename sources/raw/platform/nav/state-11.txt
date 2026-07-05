@@ -1,0 +1,251 @@
+URL: https://quafu-sqc.baqis.ac.cn/framework/composer
+
+url: https://quafu-sqc.baqis.ac.cn/framework/composer
+title: Quafu Superconducting Quantum
+viewport: 1267x626
+---
+<body />
+  <div id=app />
+    <div id=app />
+      <section />
+        <aside />
+          <div />
+            [1]<input type=checkbox role=switch aria-checked=false aria-disabled=false id=el-id-4055-19 />
+            [5]<span />
+              [3]<div />
+                [2]<span>N</span>
+              [4]<div />
+          <ul role=menubar />
+            [7]<li role=menuitem tabindex=-1 />
+              <i />
+                [6]<svg />
+            [9]<li role=menuitem tabindex=-1 />
+              <i />
+                [8]<svg />
+            [11]<li role=menuitem tabindex=-1 />
+              <i />
+                [10]<svg />
+            [13]<li role=menuitem tabindex=-1 />
+              <i />
+                [12]<svg />
+            [15]<li role=menuitem tabindex=-1 />
+              <i />
+                [14]<svg />
+            [19]<li role=menuitem tabindex=-1 />
+              [18]<div aria-label=[event-specific entry redacted] />
+                [16]<span>HOT</span>
+                <i />
+                  [17]<svg />
+        <main />
+          <div />
+            <div />
+              <div />
+                <div />
+                  <div />
+                    |scroll|<div /> (h:0%)
+                      <div />
+                        <h3>Operations</h3>
+                        <div />
+                          <div />
+                            <div />
+                              <span>H</span>
+                          <div />
+                            <div />
+                              <span>X</span>
+                          <div />
+                            <div />
+                              <span>Y</span>
+                          <div />
+                            <div />
+                              <span>Z</span>
+                          <div />
+                            <div />
+                              <span>S</span>
+                          <div />
+                            <div />
+                              <span>T</span>
+                          <div />
+                            <div />
+                              <span>I</span>
+                          <div />
+                            <div />
+                              <div />
+                                S
+                                <span>†</span>
+                          <div />
+                            <div />
+                              <div />
+                                T
+                                <span>†</span>
+                          <div />
+                            <div />
+                              <div />
+                                √
+                                <span>X</span>
+                          <div />
+                            <div />
+                              <div />
+                                √
+                                <span>X</span>
+                                <span>†</span>
+                          <div />
+                            <div />
+                              <div />
+                                <span>z</span>
+                          <div />
+                            <div />
+                              <span>P</span>
+                          <div />
+                            <div />
+                              <span>RX</span>
+                          <div />
+                            <div />
+                              <span>RY</span>
+                          <div />
+                            <div />
+                              <span>RZ</span>
+                          <div />
+                            <div />
+                              <span>U</span>
+                          <div />
+                            <div />
+                              <i />
+                                <svg />
+                          <div />
+                            <div />
+                              <div />
+                                <i />
+                                  <svg />
+                          <div />
+                            <div />
+                              <div />
+                                <svg />
+                    |scroll|<div /> (h:0%)
+                      <div />
+                        <div />
+                          <h3>Circuits</h3>
+                          <i />
+                            <svg />
+                        <div />
+                          <div />
+                            <div />
+                              [21]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [20]<svg />
+                              [23]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [22]<svg />
+                            <div />
+                              <button aria-disabled=true />
+                                    <svg />
+                              <button aria-disabled=true />
+                                    <svg />
+                            <div />
+                              [25]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [24]<svg />
+                              [27]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [26]<svg />
+                            <div />
+                              [29]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [28]<svg />
+                              [31]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [30]<svg />
+                              [33]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [32]<svg />
+                              <button aria-disabled=true />
+                                    <svg />
+                            <div />
+                              [35]<button aria-disabled=false />
+                                <span />
+                                  <i />
+                                    [34]<svg />
+                        <div />
+                          <div role=dialog aria-label=Save As />
+                        <div />
+                          <div role=dialog aria-label=Load Circuit />
+                        <div />
+                          <div role=dialog aria-label=Run on QPU />
+                        <div />
+                          <div role=dialog aria-label=Use cases />
+                        <div />
+                          <div role=dialog aria-label=Generate Circuit />
+                        <div />
+                          <div aria-label=Task details role=dialog />
+                        <div />
+                          <div />
+                            <span>q[0]</span>
+                          <div />
+                            <span>q[1]</span>
+                          <div />
+                            <span>q[2]</span>
+                          <div />
+                            <span>q[3]</span>
+                          <svg />
+                    |scroll|<div /> (h:0%)
+                      <div />
+                        <div />
+                          <h3>OpenQASM</h3>
+                          [37]<button aria-disabled=false />
+                            <span />
+                              <i />
+                                [36]<svg />
+                        <div />
+                          [38]<pre tabindex=0 />
+                            <code />
+                              q c
+                              <span>OPENQASM</span>
+                              <span>2.0</span>
+                              <span>;</span>
+                              <span>include</span>
+                              <span>"qelib1.inc"</span>
+                              <span>;</span>
+                              <span>qreg</span>
+                              <span>[</span>
+                              <span>4</span>
+                              <span>]</span>
+                              <span>;</span>
+                              <span>creg</span>
+                              <span>[</span>
+                              <span>4</span>
+                              <span>]</span>
+                              <span>;</span>
+              <div />
+                <div />
+                  <div />
+                    <div />
+                      <div />
+                        <div />
+                          <h3>Output state</h3>
+                          [40]<button aria-disabled=false />
+                            <span />
+                              <i />
+                                [39]<svg />
+                        <div />
+                          |scroll[41]|<textarea tabindex=0 autocomplete=off id=el-id-4055-68 value=1.000+0.000i 0.000+0.000i /> (0↑ 0.7↓)
+                    <div />
+                      <div />
+                        <div />
+                          <div />
+                            <span>π/2</span>
+                            <span>0</span>
+                            <span>3π/2</span>
+                            <span>π</span>
+                            <span>Phase</span>
+  <div id=el-popper-container-4055 />
+    <div tabindex=-1 role=tooltip id=el-id-4055-2>JupyterLab</div>
+  <div />
+    |iframe|<iframe />
+---
+interactive: 41 | iframes: 1

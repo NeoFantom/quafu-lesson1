@@ -1,0 +1,140 @@
+URL: https://quafu-sqc.baqis.ac.cn/framework/user
+
+url: https://quafu-sqc.baqis.ac.cn/framework/user
+title: Quafu Superconducting Quantum
+viewport: 1267x626
+---
+<body />
+  <div id=app />
+    <div id=app />
+      <section />
+        <aside />
+          <div />
+            [1]<input type=checkbox role=switch aria-checked=false aria-disabled=false id=el-id-4055-19 />
+            [5]<span />
+              [3]<div />
+                [2]<span>N</span>
+              [4]<div />
+          <ul role=menubar />
+            [7]<li role=menuitem tabindex=-1 />
+              <i />
+                [6]<svg />
+            [9]<li role=menuitem tabindex=-1 />
+              <i />
+                [8]<svg />
+            [11]<li role=menuitem tabindex=-1 />
+              <i />
+                [10]<svg />
+            [13]<li role=menuitem tabindex=-1 />
+              <i />
+                [12]<svg />
+            [15]<li role=menuitem tabindex=-1 />
+              <i />
+                [14]<svg />
+            [19]<li role=menuitem tabindex=-1 />
+              [18]<div aria-label=[event-specific entry redacted] />
+                [16]<span>HOT</span>
+                <i />
+                  [17]<svg />
+        <main />
+          <div />
+            <div />
+              <div />
+                <div />
+                  <div role=tablist />
+                    [20]<div id=tab-info role=tab aria-selected=true tabindex=0>User Info</div>
+                    [21]<div id=tab-jupyter role=tab aria-selected=false tabindex=-1>JupyterLab server</div>
+                    [22]<div id=tab-password role=tab aria-selected=false tabindex=-1>Update Password</div>
+            <div />
+              <div id=pane-info role=tabpanel />
+                <div />
+                  <div />
+                    <span>User Name:</span>
+                    <span>[REDACTED_USER]</span>
+                <div />
+                  <div />
+                    <span>Email:</span>
+                    <span>[REDACTED_EMAIL]</span>
+                <div />
+                  <div />
+                    <span>Last Login:</span>
+                    <span>7/5/2026, 11:55:09 PM</span>
+                [23]<button aria-disabled=false />
+                  <span>Logout</span>
+              <div id=pane-jupyter role=tabpanel />
+                <div />
+                  <div />
+                    <span>Resource usage</span>
+                    <i />
+                      <svg />
+                  <div role=progressbar aria-valuenow=3.3 aria-valuemin=0 aria-valuemax=100 />
+                    <div />
+                      <svg />
+                    <div />
+                      <span>3.3%</span>
+                      <span>Active users/user capacity</span>
+                <div />
+                  <div />
+                    <span>Server name:</span>
+                    <span>[REDACTED_USER]</span>
+                <div />
+                  <div />
+                    <span>Ready:</span>
+                    <span />
+                      <span />
+                        <span>false</span>
+                      <span />
+                        <span>true</span>
+                <div />
+                  <div />
+                    <span>Started:</span>
+                    <span>7/6/2026, 12:03:43 AM</span>
+                <div />
+                  <div />
+                    <span>Last activity:</span>
+                    <span>7/6/2026, 12:03:51 AM</span>
+                <div />
+                  <div />
+                    <span>Memory guarantee:</span>
+                    <span>1 Gi</span>
+                <div />
+                  <div />
+                    <span>Total storage:</span>
+                    <span>10 Gi</span>
+                [25]<button aria-disabled=false />
+                  [24]<span>Stop JupyterLab server</span>
+              <div id=pane-password role=tabpanel />
+                <div />
+                  <form />
+                    <div />
+                      <label id=el-id-4055-102 for=el-id-4055-106>Current Password</label>
+                      <div />
+                        <div />
+                          <div tabindex=-1 />
+                            [26]<input type=password autocomplete=off tabindex=0 id=el-id-4055-106 />
+                    <div />
+                      <label id=el-id-4055-103 for=el-id-4055-107>New Password</label>
+                      <div />
+                        <div />
+                          <div tabindex=-1 />
+                            [27]<input type=password autocomplete=off tabindex=0 id=el-id-4055-107 />
+                    <div />
+                      <label id=el-id-4055-104 for=el-id-4055-108>Confirm New Password</label>
+                      <div />
+                        <div />
+                          <div tabindex=-1 />
+                            [28]<input type=password autocomplete=off tabindex=0 id=el-id-4055-108 />
+                    <div />
+                      <div />
+                        [30]<button aria-disabled=false type=submit />
+                          [29]<span>Update</span>
+  <div id=el-popper-container-4055 />
+    <div tabindex=-1 role=tooltip id=el-id-4055-4>Tasks</div>
+  <div />
+    |iframe|<iframe />
+  <div id=message_1 role=alert />
+    <i />
+      <svg />
+    <p>Error occurred when loading tasks: 401: {"detail":"the token is expired!"}</p>
+---
+interactive: 30 | iframes: 1

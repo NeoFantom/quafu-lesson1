@@ -1,0 +1,46 @@
+URL: https://quafu-sqc.baqis.ac.cn/framework/jupyter
+
+url: https://quafu-sqc.baqis.ac.cn/framework/jupyter
+title: Quafu Superconducting Quantum
+viewport: 1267x626
+---
+<body />
+  <div id=app />
+    <div id=app />
+      <section />
+        <aside />
+          <div />
+            [1]<input type=checkbox role=switch aria-checked=false aria-disabled=false id=el-id-4055-19 />
+            [5]<span />
+              [3]<div />
+                [2]<span>N</span>
+              [4]<div />
+          <ul role=menubar />
+            [7]<li role=menuitem tabindex=-1 />
+              <i />
+                [6]<svg />
+            [9]<li role=menuitem tabindex=-1 />
+              <i />
+                [8]<svg />
+            [11]<li role=menuitem tabindex=-1 />
+              <i />
+                [10]<svg />
+            [13]<li role=menuitem tabindex=-1 />
+              <i />
+                [12]<svg />
+            [15]<li role=menuitem tabindex=-1 />
+              <i />
+                [14]<svg />
+            [19]<li role=menuitem tabindex=-1 />
+              [18]<div aria-label=[event-specific entry redacted] />
+                [16]<span>HOT</span>
+                <i />
+                  [17]<svg />
+        <main />
+          <div />
+            <div />
+              |iframe|<iframe src=/api/jupyterhub />
+  <div />
+    |iframe|<iframe />
+---
+interactive: 19 | iframes: 2

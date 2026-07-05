@@ -1,0 +1,424 @@
+URL: https://quafu-sqc.baqis.ac.cn/framework/home
+
+url: https://quafu-sqc.baqis.ac.cn/framework/home
+title: Quafu Superconducting Quantum
+viewport: 1267x626
+page_scroll: 0↑ 0.7↓
+---
+<body />
+  <div id=app />
+    <div id=app />
+      <section />
+        <aside />
+          <div />
+            [1]<input type=checkbox role=switch aria-checked=false aria-disabled=false id=el-id-4055-19 />
+            [5]<span />
+              [3]<div />
+                [2]<span>N</span>
+              [4]<div />
+          <ul role=menubar />
+            [7]<li role=menuitem tabindex=-1 />
+              <i />
+                [6]<svg />
+            [9]<li role=menuitem tabindex=-1 />
+              <i />
+                [8]<svg />
+            [11]<li role=menuitem tabindex=-1 />
+              <i />
+                [10]<svg />
+            [13]<li role=menuitem tabindex=-1 />
+              <i />
+                [12]<svg />
+            [15]<li role=menuitem tabindex=-1 />
+              <i />
+                [14]<svg />
+            [19]<li role=menuitem tabindex=-1 />
+              [18]<div aria-label=[event-specific entry redacted] />
+                [16]<span>HOT</span>
+                <i />
+                  [17]<svg />
+        <main />
+          <div />
+            <section />
+              <header />
+                <div />
+                  [21]<button aria-disabled=false />
+                    <span />
+                      <i />
+                        [20]<svg />
+                  <b>Welcome [REDACTED_USER]</b>
+                <div />
+                  <div role=dialog aria-label=Upgrade to premium />
+                <div />
+                  [22]<a href=/challenges/register>🏆 [event-specific entry redacted]</a>
+                  <div />
+                    <label for=api-token>API Token</label>
+                    <div />
+                      <div tabindex=-1 />
+                        [23]<input type=password autocomplete=off tabindex=0 placeholder=Your API Token id=api-token value=•••• />
+                    [25]<button aria-disabled=false name=refreshToken />
+                      <span />
+                        <i />
+                          [24]<svg />
+                    [27]<button aria-disabled=false />
+                      <span />
+                        <i />
+                          [26]<svg />
+                  <div />
+                    [29]<button aria-disabled=false name=feedback />
+                      <span />
+                        <i />
+                          [28]<svg />
+                  <div />
+                    <div role=dialog aria-label=Contact us />
+              <main />
+                <div />
+                  <h3>Statistics</h3>
+                  <div />
+                    <div />
+                      [31]<div id=el-collapse-head-15 aria-expanded=true tabindex=0 aria-disabled=false role=button />
+                        <span />
+                          <span>Personal resources</span>
+                        <i />
+                          [30]<svg />
+                      <div id=el-collapse-content-15 role=region />
+                        <div />
+                          <div />
+                            <div />
+                              <div />
+                                <div />
+                                  <div />
+                                    Your / available QPUs
+                                    <span />
+                                      <span>online</span>
+                                <div />
+                                  <div />
+                                    <div>2</div>
+                                  <span>/5</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div>Remaining execution time (sec)</div>
+                                <div />
+                                  <span>---</span>
+                              <div />
+                                <div />
+                                  <div />
+                                    <i />
+                                      <svg />
+                                  <span>Time refresh in</span>
+                                  <div />
+                                    <div />
+                                      <span>06 days</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div>API token expiration in</div>
+                                <div />
+                                  <span>00 days</span>
+                              <div />
+                                <div />
+                                  <div />
+                                    <i />
+                                      <svg />
+                                  <span>at 2026-07-04 16:03:01</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div>Jupyter server running for</div>
+                                <div />
+                                  <span>---</span>
+                    <div />
+                      [33]<div id=el-collapse-head-16 aria-expanded=true tabindex=0 aria-disabled=false role=button />
+                        <span />
+                          <span>Tasks statistics</span>
+                        <i />
+                          [32]<svg />
+                      <div id=el-collapse-content-16 role=region />
+                        <div />
+                          <div />
+                            <div />
+                              <div />
+                                <div />
+                                  <div>Your last task submitted</div>
+                                <div />
+                                  <span>---</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div>Tasks in queue waiting for execution</div>
+                                <div />
+                                  <span>---</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div />
+                                    Waiting time of last task
+                                    <span />
+                                      <span>finished</span>
+                                <div />
+                                  <span>---</span>
+                            <div />
+                              <div />
+                                <div />
+                                  <div />
+                                    Executing time of last task
+                                    <span />
+                                      <span>finished</span>
+                                <div />
+                                  <span>---</span>
+                <div />
+                  <div />
+                    <h3>Available QPUs</h3>
+                    <div />
+                      [82]<div />
+                        [81]<div />
+                          [80]<div />
+                            [79]<div />
+                              [78]<div />
+                                [73]<div />
+                                  [72]<div />
+                                    [38]<div />
+                                      [34]<h1>Baihua</h1>
+                                      [37]<div />
+                                        [35]<img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvk… />
+                                        [36]<span>7</span>
+                                    [71]<div />
+                                      [44]<div />
+                                        [40]<div />
+                                          [39]<span>Status</span>
+                                        [43]<div />
+                                          [42]<span />
+                                            [41]<span>Online</span>
+                                      [49]<div />
+                                        [46]<div />
+                                          [45]<span>Queue</span>
+                                        [48]<div />
+                                          [47]<span>0</span>
+                                      [70]<div />
+                                        [54]<div />
+                                          [53]<div />
+                                            [50]<div>Qubits</div>
+                                            [52]<div />
+                                              [51]<span>156</span>
+                                        [59]<div />
+                                          [58]<div />
+                                            [55]<div>Couplers</div>
+                                            [57]<div />
+                                              [56]<span>182</span>
+                                        [64]<div />
+                                          [63]<div />
+                                            [60]<div>Median 1Q error</div>
+                                            [62]<div />
+                                              [61]<span>1.0e-3</span>
+                                        [69]<div />
+                                          [68]<div />
+                                            [65]<div>Median 2Q error</div>
+                                            [67]<div />
+                                              [66]<span>1.7e-2</span>
+                                [75]<div />
+                                  [74]<div />
+                                [77]<div />
+                                  [76]<div />
+                      [131]<div />
+                        [130]<div />
+                          [129]<div />
+                            [128]<div />
+                              [127]<div />
+                                [122]<div />
+                                  [121]<div />
+                                    [87]<div />
+                                      [83]<h1>Dongling</h1>
+                                      [86]<div />
+                                        [84]<img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvk… />
+                                        [85]<span>2</span>
+                                    [120]<div />
+                                      [93]<div />
+                                        [89]<div />
+                                          [88]<span>Status</span>
+                                        [92]<div />
+                                          [91]<span />
+                                            [90]<span>Online</span>
+                                      [98]<div />
+                                        [95]<div />
+                                          [94]<span>Queue</span>
+                                        [97]<div />
+                                          [96]<span>0</span>
+                                      [119]<div />
+                                        [103]<div />
+                                          [102]<div />
+                                            [99]<div>Qubits</div>
+                                            [101]<div />
+                                              [100]<span>84</span>
+                                        [108]<div />
+                                          [107]<div />
+                                            [104]<div>Couplers</div>
+                                            [106]<div />
+                                              [105]<span>113</span>
+                                        [113]<div />
+                                          [112]<div />
+                                            [109]<div>Median 1Q error</div>
+                                            [111]<div />
+                                              [110]<span>3.0e-3</span>
+                                        [118]<div />
+                                          [117]<div />
+                                            [114]<div>Median 2Q error</div>
+                                            [116]<div />
+                                              [115]<span>1.8e-2</span>
+                                [124]<div />
+                                  [123]<div />
+                                [126]<div />
+                                  [125]<div />
+                      [180]<div />
+                        [179]<div />
+                          [178]<div />
+                            [177]<div />
+                              [176]<div />
+                                [171]<div />
+                                  [170]<div />
+                                    [136]<div />
+                                      [132]<h1>Shenglian</h1>
+                                      [135]<div />
+                                        [133]<img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvk… />
+                                        [134]<span>15</span>
+                                    [169]<div />
+                                      [142]<div />
+                                        [138]<div />
+                                          [137]<span>Status</span>
+                                        [141]<div />
+                                          [140]<span />
+                                            [139]<span>Calibrating</span>
+                                      [147]<div />
+                                        [144]<div />
+                                          [143]<span>Queue</span>
+                                        [146]<div />
+                                          [145]<span>---</span>
+                                      [168]<div />
+                                        [152]<div />
+                                          [151]<div />
+                                            [148]<div>Qubits</div>
+                                            [150]<div />
+                                              [149]<span>84</span>
+                                        [157]<div />
+                                          [156]<div />
+                                            [153]<div>Couplers</div>
+                                            [155]<div />
+                                              [154]<span>113</span>
+                                        [162]<div />
+                                          [161]<div />
+                                            [158]<div>Median 1Q error</div>
+                                            [160]<div />
+                                              [159]<span>1.0e-3</span>
+                                        [167]<div />
+                                          [166]<div />
+                                            [163]<div>Median 2Q error</div>
+                                            [165]<div />
+                                              [164]<span>9.0e-3</span>
+                                [173]<div />
+                                  [172]<div />
+                                [175]<div />
+                                  [174]<div />
+                      [229]<div />
+                        [228]<div />
+                          [227]<div />
+                            [226]<div />
+                              [225]<div />
+                                [220]<div />
+                                  [219]<div />
+                                    [185]<div />
+                                      [181]<h1>Hongluo</h1>
+                                      [184]<div />
+                                        [182]<img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvk… />
+                                        [183]<span>17</span>
+                                    [218]<div />
+                                      [191]<div />
+                                        [187]<div />
+                                          [186]<span>Status</span>
+                                        [190]<div />
+                                          [189]<span />
+                                            [188]<span>Calibrating</span>
+                                      [196]<div />
+                                        [193]<div />
+                                          [192]<span>Queue</span>
+                                        [195]<div />
+                                          [194]<span>---</span>
+                                      [217]<div />
+                                        [201]<div />
+                                          [200]<div />
+                                            [197]<div>Qubits</div>
+                                            [199]<div />
+                                              [198]<span>84</span>
+                                        [206]<div />
+                                          [205]<div />
+                                            [202]<div>Couplers</div>
+                                            [204]<div />
+                                              [203]<span>113</span>
+                                        [211]<div />
+                                          [210]<div />
+                                            [207]<div>Median 1Q error</div>
+                                            [209]<div />
+                                              [208]<span>6.0e-4</span>
+                                        [216]<div />
+                                          [215]<div />
+                                            [212]<div>Median 2Q error</div>
+                                            [214]<div />
+                                              [213]<span>4.7e-2</span>
+                                [222]<div />
+                                  [221]<div />
+                                [224]<div />
+                                  [223]<div />
+                      [278]<div />
+                        [277]<div />
+                          [276]<div />
+                            [275]<div />
+                              [274]<div />
+                                [269]<div />
+                                  [268]<div />
+                                    [234]<div />
+                                      [230]<h1>Ling</h1>
+                                      [233]<div />
+                                        [231]<img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvk… />
+                                        [232]<span>21</span>
+                                    [267]<div />
+                                      [240]<div />
+                                        [236]<div />
+                                          [235]<span>Status</span>
+                                        [239]<div />
+                                          [238]<span />
+                                            [237]<span>Calibrating</span>
+                                      [245]<div />
+                                        [242]<div />
+                                          [241]<span>Queue</span>
+                                        [244]<div />
+                                          [243]<span>---</span>
+                                      [266]<div />
+                                        [250]<div />
+                                          [249]<div />
+                                            [246]<div>Qubits</div>
+                                            [248]<div />
+                                              [247]<span>112</span>
+                                        [255]<div />
+                                          [254]<div />
+                                            [251]<div>Couplers</div>
+                                            [253]<div />
+                                              [252]<span>195</span>
+                                        [260]<div />
+                                          [259]<div />
+                                            [256]<div>Median 1Q error</div>
+                                            [258]<div />
+                                              [257]<span>4.5e-3</span>
+                                        [265]<div />
+                                          [264]<div />
+                                            [261]<div>Median 2Q error</div>
+                                            [263]<div />
+                                              [262]<span>3.6e-2</span>
+                                [271]<div />
+                                  [270]<div />
+                                [273]<div />
+                                  [272]<div />
+              <div />
+                <div role=dialog aria-label=Warning />
+  <div />
+    |iframe|<iframe />
+---
+interactive: 278 | iframes: 1

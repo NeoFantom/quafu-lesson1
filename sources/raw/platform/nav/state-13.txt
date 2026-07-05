@@ -1,0 +1,290 @@
+URL: https://quafu-sqc.baqis.ac.cn/framework/tasks
+
+url: https://quafu-sqc.baqis.ac.cn/framework/tasks
+title: Quafu Superconducting Quantum
+viewport: 1267x626
+---
+<body />
+  <div id=app />
+    <div id=app />
+      <section />
+        <aside />
+          <div />
+            [1]<input type=checkbox role=switch aria-checked=false aria-disabled=false id=el-id-4055-19 />
+            [5]<span />
+              [3]<div />
+                [2]<span>N</span>
+              [4]<div />
+          <ul role=menubar />
+            [7]<li role=menuitem tabindex=-1 />
+              <i />
+                [6]<svg />
+            [9]<li role=menuitem tabindex=-1 />
+              <i />
+                [8]<svg />
+            [11]<li role=menuitem tabindex=-1 />
+              <i />
+                [10]<svg />
+            [13]<li role=menuitem tabindex=-1 />
+              <i />
+                [12]<svg />
+            [15]<li role=menuitem tabindex=-1 />
+              <i />
+                [14]<svg />
+            [19]<li role=menuitem tabindex=-1 />
+              [18]<div aria-label=[event-specific entry redacted] />
+                [16]<span>HOT</span>
+                <i />
+                  [17]<svg />
+        <main />
+          <div />
+            <section />
+              <div />
+                <div />
+                  <div />
+                    <table />
+                      <thead />
+                        <tr />
+                          <th />
+                            <div />
+                              <label />
+                                [20]<span />
+                          [25]<th />
+                            [24]<div />
+                              Task ID
+                              [23]<span />
+                                [21]<i />
+                                [22]<i />
+                          [30]<th />
+                            [29]<div />
+                              Task Name
+                              [28]<span />
+                                [26]<i />
+                                [27]<i />
+                          [38]<th />
+                            [37]<div />
+                              Chip
+                              [33]<span />
+                                [31]<i />
+                                [32]<i />
+                              [36]<span />
+                                [35]<i />
+                                  [34]<svg />
+                          [46]<th />
+                            [45]<div />
+                              Status
+                              [41]<span />
+                                [39]<i />
+                                [40]<i />
+                              [44]<span />
+                                [43]<i />
+                                  [42]<svg />
+                          [51]<th />
+                            [50]<div />
+                              Submit Time
+                              [49]<span />
+                                [47]<i />
+                                [48]<i />
+                          <th />
+                            <div />
+                              <div />
+                                [53]<button aria-disabled=false />
+                                  <span />
+                                    <i />
+                                      [52]<svg />
+                                <div />
+                                  [55]<button aria-disabled=false id=el-id-4055-92 role=button tabindex=0 aria-expanded=false aria-haspopup=menu />
+                                    <span />
+                                      <i />
+                                        [54]<svg />
+                                [57]<button aria-disabled=false />
+                                  <span />
+                                    <i />
+                                      [56]<svg />
+                  <div />
+                    <div />
+                      <div />
+                        <div />
+                          <div />
+                            <span>No Data</span>
+                      <div />
+                        [58]<div />
+                      <div />
+                        [59]<div />
+              <div />
+                <div role=dialog aria-label=Warning />
+              <div />
+                <div role=dialog aria-label=Warning />
+              <div />
+                <div role=dialog aria-label=Warning />
+              <div />
+                <div role=dialog aria-label=Warning />
+              <div />
+                <div />
+                  <span disabled=false>Total 0</span>
+                  <button aria-label=Go to previous page aria-disabled=true />
+                      <svg />
+                  <ul />
+                    [60]<li aria-label=page 1 tabindex=0>1</li>
+                  <button aria-label=Go to next page aria-disabled=true />
+                      <svg />
+                  <span disabled=false />
+                    <span>Go to</span>
+                    <div />
+                      <div tabindex=-1 />
+                        [61]<input min=1 max=1 type=number autocomplete=off tabindex=0 aria-label=Page id=el-id-4055-87 value=1 />
+                  <span />
+                    <div />
+                      [68]<div tabindex=-1 />
+                        [64]<div />
+                          [63]<div />
+                            [62]<span>10/page</span>
+                        [67]<div />
+                          [66]<i />
+                            [65]<svg />
+              <div />
+                <div aria-label=Task details role=dialog />
+  <div id=el-popper-container-4055 />
+    <div tabindex=-1 role=tooltip id=el-id-4055-78 />
+      <div />
+        <div />
+          <div />
+            <ul id=el-id-4055-77 role=listbox />
+              [70]<li id=el-id-4055-79 role=option aria-selected=true />
+                [69]<span>10/page</span>
+              [72]<li id=el-id-4055-80 role=option aria-selected=false />
+                [71]<span>20/page</span>
+              [74]<li id=el-id-4055-81 role=option aria-selected=false />
+                [73]<span>30/page</span>
+              [76]<li id=el-id-4055-82 role=option aria-selected=false />
+                [75]<span>40/page</span>
+              [78]<li id=el-id-4055-83 role=option aria-selected=false />
+                [77]<span>50/page</span>
+              [80]<li id=el-id-4055-84 role=option aria-selected=false />
+                [79]<span>100/page</span>
+          <div />
+            [81]<div />
+          <div />
+            [82]<div />
+    <div tabindex=-1 role=tooltip id=el-id-4055-89 />
+      <div />
+        <div />
+          <div />
+            <div />
+              <div />
+                <div role=group aria-label=checkbox-group id=el-id-4055-98 />
+                  [87]<label />
+                    [85]<span />
+                      [83]<input type=checkbox value=Baihua />
+                      [84]<span />
+                    [86]<span>Baihua</span>
+                  [92]<label />
+                    [90]<span />
+                      [88]<input type=checkbox value=Dongling />
+                      [89]<span />
+                    [91]<span>Dongling</span>
+                  [97]<label />
+                    [95]<span />
+                      [93]<input type=checkbox value=Haituo />
+                      [94]<span />
+                    [96]<span>Haituo</span>
+                  [102]<label />
+                    [100]<span />
+                      [98]<input type=checkbox value=Yunmeng />
+                      [99]<span />
+                    [101]<span>Yunmeng</span>
+                  [107]<label />
+                    [105]<span />
+                      [103]<input type=checkbox value=Miaofeng />
+                      [104]<span />
+                    [106]<span>Miaofeng</span>
+                  [112]<label />
+                    [110]<span />
+                      [108]<input type=checkbox value=Yudu />
+                      [109]<span />
+                    [111]<span>Yudu</span>
+                  [117]<label />
+                    [115]<span />
+                      [113]<input type=checkbox value=Hongluo />
+                      [114]<span />
+                    [116]<span>Hongluo</span>
+            <div />
+              [118]<div />
+            <div />
+              [119]<div />
+        <div />
+          <button>Confirm</button>
+          [120]<button>Reset</button>
+    <div tabindex=-1 role=tooltip id=el-id-4055-90 />
+      <div />
+        <div />
+          <div />
+            <div />
+              <div />
+                <div role=group aria-label=checkbox-group id=el-id-4055-99 />
+                  [125]<label />
+                    [123]<span />
+                      [121]<input type=checkbox value=Submitted />
+                      [122]<span />
+                    [124]<span>Submitted</span>
+                  [130]<label />
+                    [128]<span />
+                      [126]<input type=checkbox value=Transpiled />
+                      [127]<span />
+                    [129]<span>Transpiled</span>
+                  [135]<label />
+                    [133]<span />
+                      [131]<input type=checkbox value=Pending />
+                      [132]<span />
+                    [134]<span>Pending</span>
+                  [140]<label />
+                    [138]<span />
+                      [136]<input type=checkbox value=Canceled />
+                      [137]<span />
+                    [139]<span>Canceled</span>
+                  [145]<label />
+                    [143]<span />
+                      [141]<input type=checkbox value=Failed />
+                      [142]<span />
+                    [144]<span>Failed</span>
+                  [150]<label />
+                    [148]<span />
+                      [146]<input type=checkbox value=Finished />
+                      [147]<span />
+                    [149]<span>Finished</span>
+            <div />
+              [151]<div />
+            <div />
+              [152]<div />
+        <div />
+          <button>Confirm</button>
+          [153]<button>Reset</button>
+    <div tabindex=-1 />
+      <div />
+        <div />
+          <div />
+            <ul tabindex=-1 role=menu id=el-id-4055-93 />
+              [154]<li aria-disabled=true tabindex=-1 role=menuitem />
+                Cancel selected tasks
+                <i />
+                  <svg />
+              [155]<li aria-disabled=true tabindex=-1 role=menuitem />
+                Delete selected tasks
+                <i />
+                  <svg />
+        <div />
+          [156]<div />
+        <div />
+          [157]<div />
+    <div tabindex=-1 role=tooltip id=el-id-4055-96 />
+      <div />
+        <div tabindex=-1 />
+          <span />
+            <span />
+              <i />
+                <svg />
+          [158]<input type=text autocomplete=off tabindex=0 placeholder=Type task ID to search id=el-id-4055-100 />
+  <div />
+    |iframe|<iframe />
+---
+interactive: 158 | iframes: 1
