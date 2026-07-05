@@ -1,0 +1,726 @@
+[
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/B94X-lY1.js",
+    "hits": [
+      "tasks",
+      "Task",
+      "result",
+      "Result",
+      "circuit",
+      "Circuit",
+      "backend",
+      "simulator",
+      "Simulator",
+      "token",
+      "Token",
+      "API",
+      "account",
+      "meters",
+      "Jupyter",
+      "job",
+      "chip",
+      "Chip",
+      "experiment",
+      "qubit",
+      "Qubit"
+    ],
+    "strings": [
+      "    Qureg qubits = createQureg(",
+      "    qubits = ",
+      "    return cirq.SingleQubitMatrixGate(np.array(",
+      "    return cirq.TwoQubitMatrixGate(np.array(",
+      " parameters.",
+      "&&(ee+=C(O),P(O)),ee+=C(O),P(O);if(L(O),O.token!==",
+      "&&(ee+=C(O),P(O)),ee+=C(O),P(O);if(L(O),O.token!=='",
+      "&&(ee=oe(O),ee.comment=O.comment);O.token===`\n`||O.token===",
+      "&&(ee=oe(O),ee.comment=O.comment,De=O.token!==",
+      "&&O.conditionalLevel!==O.nestingLevel){for(me.push(ee);O.token===",
+      "&&O.token!==",
+      "&&O.token!==`\n`&&O.token!==",
+      "&&me.length<3;)_(O),O.token===",
+      "&emsp;&emsp;'target_qubits': [",
+      "&emsp;'chip': '",
+      "&emsp;'circuit': 'YOUR_QASM_CODE',<br>",
+      "');return De}function ie(O){var ee,me=[],De;for(O.token!==",
+      "')}function Ce(O){var ee,me,De,pe;if(O.token===",
+      "')}function Me(O){var ee,me;return O.token===",
+      "(Qureg qubits",
+      "(Qureg qubits, const int q",
+      "(qubits",
+      "(qubits, q",
+      ")&&!me;)if(De=[],O.token===",
+      ")&&(O.token+=C(O),P(O)),!y.isDigit(C(O)))throw ze(O,'Digit expected, got ",
+      ")&&(me=O.token,De=me===",
+      "),A+=`\n`}}if(r&&(A+=T+`return circuit\n\n`),!t)A+=",
+      "),P+=d.params[R],F++;for(var R=0;R<d.numQubits;R++)F>0&&(P+=",
+      "),P+=f.params[R],F++;for(var R=0;R<f.numQubits;R++)F>0&&(P+=",
+      "),g+=br(N,f.numQubits),x++;for(var N=0;N<f.params.length;N++)x>0&&(g+=",
+      "),g+=br(N,p.numQubits),x++;d+=",
+      "),g+=p.params[N],x++;for(var N=0;N<p.numQubits;N++)x>0&&(g+=",
+      "),p+=br(v,c.numQubits);p+=`\n{\n`}else if(!r){p+=`OPENQASM 2.0;\n`,p+=`include ",
+      "),t?d+=br(A.wires[X],p.numQubits):d+=qreg_name+",
+      "),t?d+=br(R.wires[Z],p.numQubits):d+=",
+      "),t?h+=br(P.wires[w],f.numQubits):h+=P.wires[w],x++;X?h+=",
+      "),t?r?A+=br(y.wires[Z],f.numQubits):A+=",
+      "),t||a?y+=br(W.wires[Ce],N.numQubits):y+=",
+      "),t||a?y+=br(W.wires[Ce],N.numQubits):y+=W.wires[Ce],B++;y+=",
+      "),v+=br(g,p.numQubits)+",
+      "),v+=p.params[g],m++;for(var g=0;g<p.numQubits;g++)m>0&&(v+=",
+      "),ye+=`)\n`,ye+=A+`job_result = job.result()\n`,p?(h.indexOf(",
+      "),ye+=`)\n`,ye+=A+`job_result = job.result()\n`,p?(l==",
+      ");L(O),me[ee]=oe(O)}while(O.token===",
+      ");ee=new s(me)}else{if(O.token!==",
+      ");if(O.token!==",
+      ");q(O),L(O),ee=new p(ee,De)}else return ee;else if(O.token===",
+      ")for(De.push(oe(O));O.token===",
+      ")for(ee.push(oe(O));O.token===",
+      ")if(er(ee)||$i(ee)){if(Q(O),L(O),O.token!==",
+      ")throw me.tokenType===M.DELIMITER?Dt(me,",
+      "){Q(O);var ee,me={};do if(L(O),O.token!==",
+      "){for(De=1,me=[Se];O.token===",
+      "){if(O.token+=C(O),P(O),(C(O)===",
+      "){if(O.token==='",
+      "){if(Q(O),L(O),O.token!==",
+      "){if(Q(O),L(O),ee=oe(O),O.token!==",
+      "){if(ee=[],Q(O),L(O),O.token!==",
+      "){var Se=ye(O);if(O.token===",
+      ")||O.token===",
+      "+br(A.wires[0],p.numQubits)+",
+      "+br(S.wires[X],c.numQubits):p+=",
+      "+c.numQubits+`];\n`;for(var m in c.cregs)p+=",
+      "+me.token):ze(me,'Unexpected part ",
+      "+p.numQubits+",
+      "+r};an.prototype.getTokenErrorDisplay=function(e){if(e===null)return",
+      "+s.numQubits+`);\n\n`,s.params&&s.params.length&&(o+=l+f+",
+      ", ResultAsBool(M(",
+      ",0]],numTargetQubits:1,numControlQubits:1,params:[],drawingInfo:{connectors:[",
+      ",P==D-1&&F==this.numQubits-1?I+=",
+      ",T=v(a),D=f.usedGates(),E=f.numQubits;if(t)if(r){for(var P=",
+      ",[0,1,2]),s(n,r),n;for(var o=n.MCU1Circuit(t),u=",
+      ",backendName:",
+      ",base:q.BIT,prefixes:_.BINARY_LONG,value:8,offset:0}},H={meters:",
+      ",controlQubits:0,targetQubits:1},braket:{name:",
+      ",controlQubits:0,targetQubits:1}}},barrier:{description:",
+      ",controlQubits:0,targetQubits:1}}},delay:{description:",
+      ",controlQubits:0,targetQubits:1}}},measure:{description:",
+      ",controlQubits:0,targetQubits:1}}},srndg:{description:",
+      ",controlQubits:1,targetQubits:1},braket:{name:"
+    ],
+    "apis": [
+      "/api/availableChips",
+      "/api/task"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BGtJ-oEH.js",
+    "hits": [
+      "token"
+    ],
+    "strings": [
+      "/api/changePassword",
+      "reset_token"
+    ],
+    "apis": [
+      "/api/changePassword"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BSpbRrEf.js",
+    "hits": [
+      "chip"
+    ],
+    "strings": [
+      ",`status-chip-${g[e.status]}`])},o(w[e.status]),3)]),e.status==="
+    ],
+    "apis": [],
+    "routes": [
+      "/framework/review-project-overview"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BaFd7ILL.js",
+    "hits": [
+      "chip"
+    ],
+    "strings": [
+      ",`status-chip-${L(e)}`])},i(D(e)),3)]),s(",
+      "/api/review/me",
+      "/api/review/projects"
+    ],
+    "apis": [
+      "/api/review/me",
+      "/api/review/projects"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BlMkSGs1.js",
+    "hits": [
+      "Task",
+      "monitor",
+      "Monitor",
+      "Qubit"
+    ],
+    "strings": [
+      "/api/system-stats",
+      "/api/user-counts",
+      "/sqc-api/access-by-date",
+      "/sqc-api/access-by-ip",
+      "/sqc-api/monthly-access",
+      "/sqc-api/task-stats",
+      "Failed to get task statistics data: ",
+      "Monitor",
+      "SystemMonitor",
+      "SystemQubitDistribution",
+      "TaskMonitor",
+      "WebMonitor",
+      "monitor"
+    ],
+    "apis": [
+      "/api/system-stats",
+      "/api/user-counts"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BlNrdS4L.js",
+    "hits": [
+      "meters"
+    ],
+    "strings": [
+      "/api/meters-info",
+      "Get meters info failed: "
+    ],
+    "apis": [
+      "/api/meters-info"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/BuQ0Sv3e.js",
+    "hits": [
+      "token",
+      "Token",
+      "account"
+    ],
+    "strings": [
+      "/api/token",
+      "Don't have an account? ",
+      "Token does not exist",
+      "have_no_account",
+      "recaptchaToken"
+    ],
+    "apis": [
+      "/api/token"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/C1S-aYMP.js",
+    "hits": [
+      "chip"
+    ],
+    "strings": [
+      ",`status-chip-${D[o.status]}`])},n(j[o.status]),3),t(",
+      "/api/review/organizer/project-experts"
+    ],
+    "apis": [
+      "/api/review/organizer/project-experts"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/CO1N0FB4.js",
+    "hits": [
+      "result",
+      "chip"
+    ],
+    "strings": [
+      ",href:h.value.resultUrl||void 0,download:",
+      "panel-badge workflow-status-chip"
+    ],
+    "apis": [],
+    "routes": [
+      "/framework/review"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/CPPwYYxE.js",
+    "hits": [
+      "result",
+      "chip"
+    ],
+    "strings": [
+      "/api/review/organizer/project-overview",
+      "/api/review/organizer/project-overview/export-expert-details",
+      "review_results.csv",
+      "track-chip"
+    ],
+    "apis": [
+      "/api/review/organizer/project-overview",
+      "/api/review/organizer/project-overview/export",
+      "/api/review/organizer/project-overview/export-expert-details"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/CQ3oOpQJ.js",
+    "hits": [
+      "result"
+    ],
+    "strings": [],
+    "apis": [],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/CYO_f7TI.js",
+    "hits": [
+      "Tasks",
+      "tasks",
+      "Task",
+      "result",
+      "circuit",
+      "Circuit",
+      "token",
+      "Token",
+      "API",
+      "composer",
+      "Jupyter",
+      "chip",
+      "Chip",
+      "Qubit"
+    ],
+    "strings": [
+      " API token expiration in ",
+      " Jupyter server running for ",
+      " Tasks in queue waiting for execution ",
+      " Your last task submitted  ",
+      ")}else l=d.data.finished}return l},u=(d,s)=>{D.get(`/api/task/${d}`,{headers:{",
+      ",h.chipName)};return(n,_)=>{const b=y(",
+      ",null,[e(Nt,{availableQPU:I.value,onlineQPU:q.value,tokenExp:A.value},null,8,[",
+      ",props:{chipName:{}},emits:[",
+      "/api/api-token",
+      "/api/availableChips",
+      "/api/feedback",
+      "/api/review/me",
+      "/api/review/organizer/me",
+      "/api/tasks",
+      "API Token",
+      "APIToken",
+      "AllChips",
+      "Failed to copy token",
+      "Get API token expiration failed: ",
+      "Get API token failed: ",
+      "Load API token failed: ",
+      "MyChips",
+      "Qubits",
+      "Refresh token",
+      "Tasks statistics",
+      "Token copied",
+      "Token refreshed",
+      "Your API token is still valid, no need to request a refresh now.",
+      "api-token",
+      "chipName",
+      "inputToken",
+      "refreshToken",
+      "tokenExp",
+      "updateChipInfo",
+      "updateTokenExp",
+      "}),e(Ye,{onUpdateTokenExp:R}),e(k,{direction:"
+    ],
+    "apis": [
+      "/api/api-token",
+      "/api/api-token-expiration",
+      "/api/availableChips",
+      "/api/current-user",
+      "/api/current-username",
+      "/api/feedback",
+      "/api/premium-user",
+      "/api/review/me",
+      "/api/review/organizer/me",
+      "/api/tasks"
+    ],
+    "routes": [
+      "/framework/review",
+      "/framework/review-assignment-experts",
+      "/framework/review-management",
+      "/framework/review-project-overview"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/Cs3nFf6A.js",
+    "hits": [
+      "chip"
+    ],
+    "strings": [
+      ",`status-chip-${H(e.assignmentStatus)}`])},o(O(e.assignmentStatus)),3)]),a(",
+      "/api/review/organizer/review-management",
+      "track-chip"
+    ],
+    "apis": [
+      "/api/review/organizer/review-management"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/DU5ifFCx.js",
+    "hits": [
+      "result",
+      "Token"
+    ],
+    "strings": [
+      ",accept:k.result.accept,",
+      "/api/registrations",
+      "/api/registrations/me",
+      "Token does not exist",
+      "recaptchaToken",
+      "result",
+      "resultDocument"
+    ],
+    "apis": [
+      "/api/registrations",
+      "/api/registrations/me"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/DYQgX_bk.js",
+    "hits": [
+      "Token",
+      "account"
+    ],
+    "strings": [
+      "/api/register",
+      "Already have an account? ",
+      "Token does not exist",
+      "have_account"
+    ],
+    "apis": [
+      "/api/register"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/Dh0K5err.js",
+    "hits": [
+      "tasks",
+      "Task",
+      "chip",
+      "Chip"
+    ],
+    "strings": [
+      "+_(j.value.taskId)+",
+      "/api/tasks",
+      "Are you sure to cancel all the selected tasks?",
+      "Are you sure to cancel the task ",
+      "Are you sure to delete all the selected tasks?",
+      "Cancel selected tasks",
+      "Chip",
+      "Delete selected tasks",
+      "Error occurred when cancelling selected task, ",
+      "Error occurred when deleting selected tasks, ",
+      "Error occurred when loading tasks: ",
+      "Refresh task status",
+      "Task",
+      "Task Name",
+      "Task details",
+      "Type task ID to search",
+      "chipName",
+      "task",
+      "taskIndex",
+      "taskName",
+      "taskPageSize",
+      "taskTableRef"
+    ],
+    "apis": [
+      "/api/tasks"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/DkZksb-p.js",
+    "hits": [
+      "account"
+    ],
+    "strings": [
+      "Enter the email associated with your account:"
+    ],
+    "apis": [
+      "/api/retrievePassword"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/WrIetgEN.js",
+    "hits": [
+      "Task",
+      "circuit",
+      "dashboard",
+      "Composer",
+      "Jupyter"
+    ],
+    "strings": [
+      "/api/current-user",
+      "/api/logout",
+      "/api/updatePassword",
+      "/api/user-server",
+      "JupyterLab server",
+      "JupyterLab server stopped",
+      "Stop JupyterLab server",
+      "Stopping JupyterLab server failed: ",
+      "circuit",
+      "dashboard",
+      "jupyter",
+      "latestComposerTaskId",
+      "of concurrent users accessing the Jupyter environment. It is not allowed ",
+      "taskPageSize"
+    ],
+    "apis": [
+      "/api/active-users",
+      "/api/current-user",
+      "/api/current-username",
+      "/api/logout",
+      "/api/updatePassword",
+      "/api/user-server"
+    ],
+    "routes": [
+      "/framework/home"
+    ]
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/YR1lTkBR.js",
+    "hits": [
+      "Jupyter"
+    ],
+    "strings": [
+      "/api/jupyterhub",
+      "Jupyter",
+      "jupyter"
+    ],
+    "apis": [
+      "/api/jupyterhub"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/zd_RSH-V.js",
+    "hits": [
+      "tasks",
+      "Task",
+      "result",
+      "Result",
+      "circuit",
+      "Circuit",
+      "token",
+      "Token",
+      "composer",
+      "Composer",
+      "meters",
+      "chip",
+      "Chip",
+      "qubit",
+      "Qubit"
+    ],
+    "strings": [
+      " For better simulation performance of deep and large-scale circuits, ",
+      "&&(b.popToken(),w=!0)}return{tokens:w?n:r,numArgs:0}};e.macros.set(",
+      "&&(e=a.gullet.popToken(),e.text===",
+      "&emsp;&emsp;'target_qubits': [",
+      "&emsp;'chip': '",
+      "&emsp;'circuit': 'YOUR_QASM_CODE',<br>",
+      ")),this.gullet.pushTokens(e);var r=this.parseExpression(!1);return this.expect(",
+      "),e.gullet.pushToken(l),e.gullet.pushToken(n),{type:",
+      "),this.nextToken=t,r}parseExpression(e,t){for(var r=[];;){this.mode===",
+      ").value,token:n}}});defineFunction({type:",
+      ");var dotsByToken={",
+      ");var o=0;if(n=a.consumeArg().tokens,n.length===1&&n[0].text===",
+      ")?(g.push(a.subparse([new Token(",
+      ")])],-1))])]),_:1})]),_:1})])}}}),SimResults=_export_sfc(_sfc_main$1,[[",
+      ")if(e=a.popToken(),e.text[0]===",
+      ")return null;t=this.popToken(),{tokens:n,end:r}=this.consumeArg([",
+      ")t=8,e=a.popToken();else if(e.text==='",
+      ")},me=()=>{_.qubits.length>1&&ae(",
+      ",!1);var b=t.nextToken,w=assertNodeType(t.parseFunction(),",
+      ",a.nextToken);a.settings.reportNonstrict(",
+      ",a.nextToken)}return a.gullet.endGroup(),a.gullet.endGroup(),{type:",
+      ",body:n,tag:r.subparse([new Token(",
+      ",d=a.expandNextToken();d.text!==",
+      ",function(a){var e=a.consumeArgs(2);return{tokens:e[0],numArgs:0}});defineMacro(",
+      ",function(a){var e=a.consumeArgs(2);return{tokens:e[1],numArgs:0}});defineMacro(",
+      ",function(a){var e=a.popToken(),t,r=",
+      ",mode:e.mode,replaceWith:n,token:r}}});var stylArray=[",
+      ",n.nextToken);n.consume(),n.consumeSpaces(),n.expect(",
+      ",new Token(e[t],new SourceLocation(this,t,t+1)));var n=r[6]||r[3]||(r[2]?",
+      ",params:{qubits:2,repetitions:1,entanglement:",
+      ",qubits:2,gateParam:.5},{useCaseId:",
+      ",qubits:2},{useCaseId:",
+      ",qubits:3},{useCaseId:",
+      ",ref:h,qubits:n.value,onRemoveGate:Me,onUpdateGateParams:x},null,8,[",
+      ",targetQubits:[],readoutErrorMiti:!1,dd:",
+      "/api/task",
+      "/api/tasks",
+      "/api/userLevel",
+      ":x[15]||(x[15]=P=>r.value.targetQubits=P),draggable:",
+      ";)if(r=e.gullet.popToken(),r.text===",
+      "AI generate circuit",
+      "Add qubit",
+      "Change parameters",
+      "CircuitGrid",
+      "CircuitOperations",
+      "Circuits",
+      "Clear circuit",
+      "Composer",
+      "Download circuit",
+      "Error occurred when loading tasks: ",
+      "Error when generating circuit: ",
+      "Error when submitting tasks: ",
+      "Executing circuit...",
+      "Failed to get available chips!",
+      "Input gate parameters separated by commas.",
+      "Input the target qubits separated by commas",
+      "Load circuit",
+      "Please select a circuit data file first.",
+      "QuarkCircuit",
+      "Qubit mapping",
+      "Qubits",
+      "Random parameters",
+      "Remove qubit",
+      "Run circuit",
+      "SimResults",
+      "Specify parameters",
+      "The circuit description is generated successfully.",
+      "The circuit is loaded successfully.",
+      "The first register qubits number to estimate the phase.",
+      "The loaded circuit will be inserted at a position of the current circuit.",
+      "The loaded circuit will overwrite the current circuit.",
+      "There is an error when getting latest composer task.",
+      "View latest task result",
+      "View task",
+      "])])],8,_hoisted_1$3)),[[v,t.value]])}}}),CircuitGrid=_export_sfc(_sfc_main$3,[[",
+      "],infix:!0},handler(a,e){var{parser:t,funcName:r,token:n}=a;return{type:",
+      "]},handler(a,e){var{parser:t,breakOnTokenText:r}=a,n=assertNodeType(e[0],",
+      "accent-token",
+      "addQubit",
+      "after-tokenize"
+    ],
+    "apis": [
+      "/api/availableChips",
+      "/api/generative-circuit",
+      "/api/task",
+      "/api/tasks",
+      "/api/userLevel"
+    ],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/chunks/zwByZaZ4.js",
+    "hits": [
+      "Tasks",
+      "Task",
+      "result",
+      "Result",
+      "token",
+      "Token"
+    ],
+    "strings": [
+      "&&(t=a-1),this.api.dispatchAction({type:",
+      "fromTransformResult",
+      "stackResultDimension"
+    ],
+    "apis": [],
+    "routes": []
+  },
+  {
+    "file": "sources/raw/platform-ui/assets/CnezOGbS.js",
+    "hits": [
+      "Tasks",
+      "tasks",
+      "Task",
+      "result",
+      "Result",
+      "circuit",
+      "token",
+      "Token",
+      "API",
+      "dashboard",
+      "composer",
+      "Composer",
+      "monitor",
+      "Monitor",
+      "meters",
+      "Jupyter",
+      "job",
+      "Job",
+      "experiment"
+    ],
+    "strings": [
+      "$externalResults",
+      ",Co(dr.postMessage)),aoe=typeof queueMicrotask<",
+      "/api/review/me",
+      "/api/review/organizer/me",
+      "/api/userLevel",
+      "/api/validate-token",
+      "/framework/composer",
+      "/framework/jupyter",
+      "/framework/meters",
+      "/framework/monitor",
+      "/framework/tasks",
+      "?queueMicrotask.bind(dr):typeof process<",
+      "API",
+      "Composer",
+      "ElResult",
+      "JupyterLab",
+      "Meters",
+      "Monitor",
+      "Tasks",
+      "X-XSRF-TOKEN",
+      "XSRF-TOKEN",
+      "bi bi-list-task",
+      "circuit",
+      "composer",
+      "dashboard",
+      "jupyter",
+      "latestComposerTaskId",
+      "meters",
+      "monitor",
+      "result",
+      "result.vue",
+      "taskPageSize",
+      "tasks",
+      "vuelidate#injectChildResults",
+      "vuelidate#removeChildResults",
+      "withXSRFToken"
+    ],
+    "apis": [
+      "/api/review/me",
+      "/api/review/organizer/me",
+      "/api/userLevel",
+      "/api/validate-token"
+    ],
+    "routes": [
+      "/framework",
+      "/framework/composer",
+      "/framework/home",
+      "/framework/jupyter",
+      "/framework/meters",
+      "/framework/monitor",
+      "/framework/review",
+      "/framework/tasks",
+      "/framework/user"
+    ]
+  }
+]
