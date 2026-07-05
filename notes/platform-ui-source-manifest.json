@@ -1,0 +1,36 @@
+{
+  "capture_date": "2026-07-06T00:06:00+08:00",
+  "lane": "worker-2 platform UI",
+  "primary_url": "https://quafu-sqc.baqis.ac.cn/framework/home",
+  "accepted_public_or_browser_readable_sources": [
+    "https://quafu-sqc.baqis.ac.cn/framework/home",
+    "https://quafu-sqc.baqis.ac.cn/static/assets/CnezOGbS.js",
+    "https://quafu-sqc.baqis.ac.cn/static/assets/BOZ3q9N9.css",
+    "https://quafu-sqc.baqis.ac.cn/static/quark.png"
+  ],
+  "accepted_route_probes": [
+    "/framework/home",
+    "/framework/composer",
+    "/framework/tasks",
+    "/framework/user",
+    "/framework/jupyter",
+    "/framework/meters",
+    "/framework/monitor"
+  ],
+  "redaction_decisions": [
+    "Use anonymous/public-state captures only.",
+    "Created home.login-redacted.png to cover non-lesson event notice while preserving the login-card visual.",
+    "Do not publish raw DOM/assets directly from sources/raw/.",
+    "Do not include tokens, emails, usernames, task IDs, project IDs, or event/review/organizer flows in the public site."
+  ],
+  "excluded_routes_or_flows": [
+    "/challenges/*",
+    "/framework/review*",
+    "/framework/review-management*",
+    "/framework/review-assignment*",
+    "/register",
+    "/activation",
+    "/retrievePassword",
+    "/resetPassword"
+  ]
+}
