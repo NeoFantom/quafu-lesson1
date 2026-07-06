@@ -32,3 +32,33 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   function lang(src){if(src.includes('OPENQASM'))return 'python-qasm';if(/pip install|npm run|^python/m.test(src))return 'bash';return 'python'}
   document.querySelectorAll('pre code').forEach(code=>{const src=code.textContent;const pre=code.closest('pre');if(!pre||pre.dataset.highlighted)return;const l=lang(src);pre.dataset.highlighted='true';pre.classList.add('code-highlight');if(l==='python-qasm'){pre.dataset.lang='Python + OpenQASM 2.0';pre.dataset.lint='OpenQASM lint: syntax parse check';code.innerHTML=py(src)}else if(l==='bash'){pre.dataset.lang='Shell';code.innerHTML=bash(src)}else{pre.dataset.lang='Python';code.innerHTML=py(src)}})
 })();
+(function(){
+  const dock=document.getElementById('sideDock');
+  const toggle=document.getElementById('sideToggle');
+  if(toggle&&dock){
+    toggle.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();dock.classList.toggle('expanded')});
+    document.addEventListener('click',e=>{if(!dock.contains(e.target))dock.classList.remove('expanded')});
+  }
+})();
+(function(){
+  const heroLogo=document.querySelector('.hero-logo');
+  const floating=document.getElementById('floatingLogo');
+  const sideLogo=document.querySelector('.side-logo');
+  if(!heroLogo||!floating||!sideLogo)return;
+  const clamp=x=>Math.max(0,Math.min(1,x));
+  function updateLogo(){
+    if(innerWidth<=1280){floating.style.opacity='0';return}
+    const p=clamp(((scrollY||document.documentElement.scrollTop)-36)/210);
+    if(p<=0||p>=.99){floating.style.opacity='0';return}
+    const h=heroLogo.getBoundingClientRect();
+    const t=sideLogo.getBoundingClientRect();
+    const x=h.left+(t.left-h.left)*p;
+    const y=h.top+(t.top-h.top)*p;
+    const scale=1+(0.86-1)*p;
+    floating.style.opacity=String(Math.sin(p*Math.PI));
+    floating.style.transform=`translate(${x}px, ${y}px) scale(${scale})`;
+  }
+  addEventListener('scroll',updateLogo,{passive:true});
+  addEventListener('resize',updateLogo);
+  updateLogo();
+})();
