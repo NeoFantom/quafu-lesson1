@@ -36,3 +36,7 @@ pre code{background:transparent;border:0;padding:0;color:inherit;font-size:inher
 .jump-icon{font:700 1rem var(--font-display);line-height:1;transform:translateY(-1px)}
 @media(max-width:1180px){.nav-menu a{padding:7px 6px;font-size:.8rem}.tag{display:none}}
 @media(max-width:980px){.nav-menu{display:none}.nav-actions{margin-left:auto}.docs-cta{padding:7px 10px;font-size:.88rem}}
+
+/* Zoom modal media sizing */
+#modal .zoomed-media{width:min(1400px,90vw);max-height:82vh;height:auto;object-fit:contain;background:#fff}
+#modal .inner:has(.zoomed-media){padding:18px}
