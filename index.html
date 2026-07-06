@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quafu Lesson 1 · 公开教学网页教程</title>
+  <meta name="description" content="面向第一次使用 Quafu 的学生：入口总览、注册登录、控制台、Jupyter demo、QuarkStudio 提交与结果读取。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="floating-logo" id="floatingLogo" href="#top" aria-hidden="true">Quafu <span>Lesson 1</span></a>
+
+  <aside class="side-dock" id="sideDock" aria-label="滚动目录">
+    <button class="side-toggle" id="sideToggle" type="button" aria-label="展开目录">•••</button>
+    <a class="side-logo" href="#top">Quafu <span>Lesson 1</span></a>
+    <nav class="side-toc">
+      <a href="#entry" data-section="entry"><span>02</span>入口总览</a>
+      <a href="#public-home" data-section="public-home"><span>03</span>后台预览</a>
+      <a href="#register-login" data-section="register-login"><span>04</span>注册登录</a>
+      <a href="#console" data-section="console"><span>05</span>控制台</a>
+      <a href="#jupyter" data-section="jupyter"><span>06</span>Jupyter</a>
+      <a href="#sdk" data-section="sdk"><span>07</span>SDK</a>
+      <a href="#results" data-section="results"><span>08</span>结果</a>
+      <a href="#skill" data-section="skill"><span>09</span>quafu-skill</a>
+    </nav>
+  </aside>
+
+  <nav class="quick-links" aria-label="常用跳转">
+    <a href="https://github.com/NeoFantom/quafu-skill" target="_blank" rel="noopener noreferrer">quafu-skill <span class="jump-icon" aria-hidden="true">↗</span></a>
+    <a href="https://quafu-sqc.baqis.ac.cn/home" target="_blank" rel="noopener noreferrer">查看芯片 <span class="jump-icon" aria-hidden="true">↗</span></a>
+    <a href="https://quafu-sqc.baqis.ac.cn/login" target="_blank" rel="noopener noreferrer">登录Quafu <span class="jump-icon" aria-hidden="true">↗</span></a>
+    <a href="https://quafu-sqc.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">英文文档 <span class="jump-icon" aria-hidden="true">↗</span></a>
+    <a href="docs-cn/" target="_blank" rel="noopener noreferrer">中文文档 <span class="jump-icon" aria-hidden="true">↗</span></a>
+    <button id="themeBtn" class="theme mini" onclick="toggleTheme()" aria-label="切换深浅主题">◐</button>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="wrap hero-wrap">
+      <div class="hero-main">
+        <div class="hero-logo">Quafu <span>Lesson 1</span></div>
+        <div class="eyebrow">01 · first public tutorial</div>
+        <h1>第一次使用 Quafu：从入口、控制台到第一个云端任务。</h1>
+        <p class="lead">这份教程直接给第一次使用 Quafu 的同学阅读。你会先认清几个常用入口，再完成注册登录、查看控制台、打开 Jupyter demo，最后用 QuarkStudio 提交一个 Bell state 任务并读出 counts。</p>
+        <div class="pillrow">
+          <span class="pill">官网：quafu-sqc.baqis.ac.cn</span>
+          <span class="pill">SDK：QuarkStudio</span>
+          <span class="pill">电路：OpenQASM 2.0</span>
+          <span class="pill">凭证：只使用占位符</span>
+        </div>
+        <nav class="toc">
+          <a href="#entry"><span class="num">02</span><span class="lbl">平台入口总览</span></a>
+          <a href="#public-home"><span class="num">03</span><span class="lbl">后台预览</span></a>
+          <a href="#register-login"><span class="num">04</span><span class="lbl">注册登录</span></a>
+          <a href="#console"><span class="num">05</span><span class="lbl">控制台</span></a>
+          <a href="#jupyter"><span class="num">06</span><span class="lbl">Jupyter demo</span></a>
+          <a href="#sdk"><span class="num">07</span><span class="lbl">SDK 提交流程</span></a>
+          <a href="#results"><span class="num">08</span><span class="lbl">读取结果</span></a>
+          <a href="#skill"><span class="num">09</span><span class="lbl">quafu-skill</span></a>
+        </nav>
+      </div>
+      <div class="qr-card hero-qr" aria-label="本讲义二维码">
+        <img src="assets/images/lesson-qr.png" alt="本讲义链接二维码" />
+        <span>扫码打开本讲义</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="entry" class="deck-mark">
+    <div class="wrap">
+      <div class="eyebrow">02 · platform entry overview</div>
+      <h2>先认清入口，再开始操作。</h2>
+      <p class="lead compact">Quafu 课堂中最常用的是三个官网入口和两个文档入口。前三个官网入口都在 <code>quafu-sqc.baqis.ac.cn</code> 域名下。</p>
+      <div class="link-grid entry-links">
+        <a class="link-card entry-card" href="https://quafu-sqc.baqis.ac.cn/home" target="_blank" rel="noopener noreferrer">
+          <img class="entry-thumb" src="assets/screenshots/entry-home-original.png" loading="lazy" alt="Quafu 后台主页原版截图" />
+          <span class="route">https://quafu-sqc.baqis.ac.cn/home ↗</span>
+          <h3>后台主页</h3>
+          <p>查看公开芯片与后端概况，点开芯片卡片可以进入详情页。</p>
+        </a>
+        <a class="link-card entry-card" href="https://quafu-sqc.baqis.ac.cn/login" target="_blank" rel="noopener noreferrer">
+          <img class="entry-thumb" src="assets/screenshots/entry-login-original.png" loading="lazy" alt="Quafu 登录页原版截图" />
+          <span class="route">https://quafu-sqc.baqis.ac.cn/login ↗</span>
+          <h3>登录页</h3>
+          <p>输入账号密码后进入控制台。</p>
+        </a>
+        <a class="link-card entry-card" href="https://quafu-sqc.baqis.ac.cn/framework/home" target="_blank" rel="noopener noreferrer">
+          <img class="entry-thumb" src="assets/screenshots/entry-framework-home-original.png" loading="lazy" alt="Quafu 控制台原版截图" />
+          <span class="route">https://quafu-sqc.baqis.ac.cn/framework/home ↗</span>
+          <h3>控制台</h3>
+          <p>登录后的控制台首页，用来确认 token、任务统计和可用后端。</p>
+        </a>
+        <a class="link-card docs" href="https://quafu-sqc.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">
+          <span class="route">ReadTheDocs ↗</span>
+          <h3>英文文档</h3>
+        </a>
+        <a class="link-card docs" href="docs-cn/" target="_blank" rel="noopener noreferrer">
+          <span class="route">docs-cn/ ↗</span>
+          <h3>中文文档</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="public-home" class="deck-mark">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">03 · public home preview</div>
+        <h2>后台主页用来查看芯片信息。</h2>
+        <p>来到 <code>https://quafu-sqc.baqis.ac.cn/home</code> 时，可以先看芯片卡片；如果需要登录，点击 <strong>SQCLab</strong>；如果需要查文档，点击蓝色的 <strong>here</strong>。</p>
+        <div class="cards">
+          <div class="card accent"><h4>SQCLab</h4><p>点击后进入登录流程，适合从后台主页切到个人控制台。</p></div>
+          <div class="card success"><h4>here</h4><p>点击后打开官方英文文档，适合查 API、安装和结果字段。</p></div>
+          <div class="card"><h4>芯片卡片</h4><p>卡片给出后端名称、状态和概况，点开后可以看更细的校准信息。</p></div>
+          <div class="card warn"><h4>详情页</h4><p>详情页会展示 qubits、queue、basis gates、T1/T2、校准数据和拓扑图。</p></div>
+        </div>
+      </div>
+      <div class="figure-stack">
+        <figure class="figure shot-card" onclick="zoomFig(this)">
+          <div class="bar"><span class="cap">Fig.1 · 后台主页</span><button class="zoom">点击放大</button></div>
+          <img src="assets/screenshots/06-public-home.png" loading="lazy" alt="Quafu 后台主页标注截图" />
+        </figure>
+        <figure class="figure shot-card" onclick="zoomFig(this)">
+          <div class="bar"><span class="cap">Fig.2 · 芯片详情</span><button class="zoom">点击放大</button></div>
+          <img src="assets/screenshots/07-chip-detail.png" loading="lazy" alt="Quafu 芯片详情标注截图" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="register-login" class="deck-mark">
+    <div class="wrap">
+      <div class="eyebrow">04 · register and login</div>
+      <h2>注册后登录，再进入个人控制台。</h2>
+      <p class="lead compact">第一次使用时，按页面顺序完成账号开通：输入邮箱，设置密码，发送验证邮件，去邮箱激活。激活完成后回到登录页，登录后会进入 <code>/framework/home</code>。</p>
+      <div class="walk-grid">
+        <figure class="figure shot-card" onclick="zoomFig(this)">
+          <div class="bar"><span class="cap">Fig.3 · 注册页面</span><button class="zoom">点击放大</button></div>
+          <img src="assets/screenshots/00-register.png" loading="lazy" alt="Quafu 注册页面截图" />
+          <figcaption><h3>注册流程</h3><p>填写可收信邮箱，设置并确认密码，发送验证邮件，然后到邮箱中点击激活链接。</p></figcaption>
+        </figure>
+        <figure class="figure shot-card" onclick="zoomFig(this)">
+          <div class="bar"><span class="cap">Fig.4 · 登录页面</span><button class="zoom">点击放大</button></div>
+          <img src="assets/screenshots/09-login.png" loading="lazy" alt="Quafu 登录页面截图" />
+          <figcaption><h3>登录流程</h3><p>输入邮箱和密码后进入控制台；登录失败时先检查邮箱是否已经激活。</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="console" class="deck-mark">
+    <div class="wrap">
+      <div class="eyebrow">05 · framework console</div>
+      <h2>控制台只先掌握四个页面：Home、Composer、Tasks、User。</h2>
+      <p class="lead compact">这四个页面覆盖第一次上手的主线：看资源，搭电路，查任务，管理个人入口。下面先用四张简图建立方向感，再逐页说明。</p>
+      <div class="console-overview">
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Home</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/01-home-dashboard.png" loading="lazy" alt="Home 页面截图" /></figure>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Composer</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/02-composer.png" loading="lazy" alt="Composer 页面截图" /></figure>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Tasks</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/03-tasks.png" loading="lazy" alt="Tasks 页面截图" /></figure>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">User</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/04-user.png" loading="lazy" alt="User 页面截图" /></figure>
+      </div>
+
+      <div class="interface-block">
+        <div><h3>Home：先确认资源状态。</h3><p>Home 页面显示 token 到期提示、任务统计和可用 QPU 卡片。提交任务前先看后端是否在线、队列是否合适，以及目标芯片的 qubits、couplers、1Q/2Q error。</p></div>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Fig.5 · Home</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/01-home-dashboard.png" loading="lazy" alt="Home 页面完整截图" /></figure>
+      </div>
+      <div class="interface-block">
+        <div><h3>Composer：把图形电路和 OpenQASM 对上。</h3><p>Composer 左侧提供门操作，中间是 qubit wires，右侧会同步生成 OpenQASM。第一课用 H 和 CX 做 Bell state，就能把“图形电路”和“文本电路”对应起来。</p></div>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Fig.6 · Composer</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/02-composer.png" loading="lazy" alt="Composer 页面完整截图" /></figure>
+      </div>
+      <div class="interface-block">
+        <div><h3>Tasks：任务提交后在这里等状态。</h3><p>云端任务是异步执行的。提交后保存 task id，在 Tasks 页面按 task id 查状态，完成后再读取结果；看到 token expired 提示时，回到 Home 刷新 token。</p></div>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Fig.7 · Tasks</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/03-tasks.png" loading="lazy" alt="Tasks 页面完整截图" /></figure>
+      </div>
+      <div class="interface-block">
+        <div><h3>User：管理个人信息与 Jupyter 入口。</h3><p>User 页面包含个人信息、JupyterLab server、密码更新和退出登录。公开展示时先隐藏个人字段，课堂中重点讲 Jupyter 入口和账号安全。</p></div>
+        <figure class="figure shot-card" onclick="zoomFig(this)"><div class="bar"><span class="cap">Fig.8 · User</span><button class="zoom">点击放大</button></div><img src="assets/screenshots/04-user.png" loading="lazy" alt="User 页面完整截图" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="jupyter" class="deck-mark">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">06 · jupyter demo</div>
+        <h2>打开 demo.ipynb，直接看一次 notebook 里的运行方式。</h2>
+        <p>Quafu 的 JupyterLab 可以作为课堂备用环境。打开 <code>demo.ipynb</code> 后，token 已经默认准备好，直接运行即可；notebook 里还能看到更直观的芯片拓扑图。</p>
+        <div class="note good"><span class="lab">课堂提示</span><p>本地 Python 环境没准备好的同学，可以先用 JupyterLab 跟上演示；课后再把同样的 QuarkStudio 代码搬到本地环境。</p></div>
+      </div>
+      <figure class="figure shot-card" onclick="zoomFig(this)">
+        <div class="bar"><span class="cap">Fig.9 · demo.ipynb</span><button class="zoom">点击放大</button></div>
+        <img src="assets/screenshots/08-jupyter-demo.png" loading="lazy" alt="JupyterLab demo.ipynb 截图" />
+      </figure>
+    </div>
+  </section>
+
+  <section id="sdk" class="deck-mark">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">07 · quarkstudio path</div>
+        <h2>SDK 主线记住三步：status → run → result。</h2>
+        <p>QuarkStudio 的第一课用 <code>Task</code> 管理提交。先看后端状态，再提交任务，最后用 task id 拉取结果。</p>
+        <pre><code>from quark import Task
+
+# 公开教程只写占位符；自己的 token 保存在本地私有位置。
+tmgr = Task("YOUR_QUAFU_TOKEN")
+
+# 1. 查看可用后端
+print(tmgr.status())
+
+circuit = """
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[2];
+creg c[2];
+h q[0];
+cx q[0],q[1];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+"""
+
+task = {
+    "chip": "example_backend",
+    "name": "bell-state-demo",
+    "circuit": circuit,
+    "shots": 1000,
+}
+
+# 2. 提交任务；保存 task id
+tid = tmgr.run(task)
+print(tid)
+
+# 3. 等待任务完成后读取结果
+res = tmgr.result(tid)
+print(res)</code></pre>
+      </div>
+      <div>
+        <div class="note good"><span class="lab">OpenQASM lint</span><p>OpenQASM 3 有官方 ANTLR 参考语法；本课代码使用 OpenQASM 2.0，可用 <code>qiskit.qasm2.loads(circuit)</code> 做语法解析检查。本页面会把含 <code>OPENQASM</code> 的字符串显示为 <strong>OpenQASM lint: syntax parse check</strong>。</p></div>
+        <pre><code>from qiskit import qasm2
+
+# 如果这一行能够执行，说明这段 OpenQASM 2.0 可以被解析。
+qasm2.loads(circuit)</code></pre>
+        <div class="note warn"><span class="lab">凭证安全</span><p>不要把真实 token 发到群里、写进公开仓库或放进截图。公开代码统一使用 <code>YOUR_QUAFU_TOKEN</code>。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="deck-mark">
+    <div class="wrap">
+      <div class="eyebrow">08 · read results</div>
+      <h2>读结果时先看状态，再看 counts。</h2>
+      <p class="lead compact">Bell state 的演示结果通常重点看 <code>00</code> 与 <code>11</code> 两个 bitstring。真实芯片会有噪声，所以 counts 关注主要分布和总体趋势。</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>字段</th><th>课堂读法</th><th>常见处理</th></tr></thead>
+          <tbody>
+            <tr><td><code>status</code></td><td>任务当前状态。</td><td>未完成时等待后再查，避免重复提交。</td></tr>
+            <tr><td><code>task id</code></td><td>云端任务编号。</td><td>提交后立刻保存，后续查询都靠它。</td></tr>
+            <tr><td><code>count</code></td><td>测量得到的 bitstring 次数。</td><td>先看总 shots，再看主要 bitstring 的分布。</td></tr>
+            <tr><td><code>error</code></td><td>提交或执行问题。</td><td>按 token、后端状态、OpenQASM、shots 顺序排查。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="figure" onclick="zoomFig(this)">
+        <div class="bar"><span class="cap">Fig.10 · 任务闭环</span><button class="zoom">点击放大</button></div>
+        <div class="body"><img src="assets/images/quafu-workflow.svg" alt="Quafu 任务闭环图" /></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="skill" class="deck-mark">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">09 · quafu-skill</div>
+        <h2>课后可以把 quafu-skill 当作练习助手。</h2>
+        <p><a href="https://github.com/NeoFantom/quafu-skill" target="_blank" rel="noopener noreferrer">quafu-skill <span class="jump-icon" aria-hidden="true">↗</span></a> 是配套的开源技能仓库，用来把 Quafu 的常用操作、凭证安全提醒、QuarkStudio 提交流程和课堂练习整理成可复用的 agent 工作流。</p>
+        <div class="timeline">
+          <div class="step"><div><h4>先完成网页主线</h4><p>按本页顺序完成入口、注册登录、控制台和 Jupyter demo。</p></div></div>
+          <div class="step"><div><h4>再跑 SDK 示例</h4><p>用 <code>tmgr.status()</code>、<code>tmgr.run(task)</code>、<code>tmgr.result(tid)</code> 跑通一次最小任务。</p></div></div>
+          <div class="step"><div><h4>最后用 skill 固化流程</h4><p>把容易忘的命令、排错顺序和练习模板交给 quafu-skill 维护。</p></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="qr-card closing-qr">
+          <img src="assets/images/lesson-qr.png" alt="本讲义链接二维码" />
+          <span>再次扫码保存本讲义</span>
+        </div>
+        <div class="note good"><span class="lab">完成标准</span><p>读完本页后，你应该能够独立进入 Quafu，识别 Home、Composer、Tasks、User，打开 Jupyter demo，并用 QuarkStudio 提交和查询一个 Bell state 任务。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Quafu Lesson 1 · public web tutorial. Sources: Quafu website screenshots, Quafu ReadTheDocs, local sanitized captures, and this repository's validation guardrails.</p>
+    </div>
+  </footer>
+
+  <div id="pager" aria-label="翻页控制">
+    <button onclick="pagePrev()" aria-label="上一页">‹</button>
+    <span id="pageInd">1 / 1</span>
+    <button onclick="pageNext()" aria-label="下一页">›</button>
+  </div>
+
+  <div id="modal" onclick="closeModal()" aria-hidden="true">
+    <button class="close" onclick="closeModal();event.stopPropagation()" aria-label="关闭放大图"></button>
+    <div id="modalInner" class="inner" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

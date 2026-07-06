@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Quafu platform map</title>
+  <desc id="desc">A participant-facing map of the main Quafu pages.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f4f4f4"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="980" height="520" fill="#ffffff"/>
+  <rect x="40" y="40" width="900" height="440" fill="url(#panel)" stroke="#e0e0e0" filter="url(#soft)"/>
+  <rect x="40" y="40" width="72" height="440" fill="#f4f4f4" stroke="#e0e0e0"/>
+  <g transform="translate(64 86)" fill="none" stroke="#0f62fe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 14L12 3l12 11v18H5V18h14"/>
+    <path d="M0 92h24M4 82h16M8 72h8" opacity=".65"/>
+    <path d="M2 152h20v20H2zM12 152v20M2 162h20" opacity=".65"/>
+    <path d="M2 242h20M2 252h20M2 262h12" opacity=".65"/>
+    <path d="M12 330a11 11 0 1 0 0 .1M2 358c4-12 16-12 20 0" opacity=".65"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="150" y="88" font-size="24" font-weight="700" fill="#161616">Participant-facing Quafu workspace</text>
+    <text x="150" y="116" font-size="15" fill="#6f6f6f">Use this mental map before operating the platform.</text>
+    <g transform="translate(150 150)">
+      <rect width="330" height="120" fill="#fff" stroke="#c6c6c6"/>
+      <text x="24" y="36" font-size="13" fill="#6f6f6f">HOME</text>
+      <text x="24" y="68" font-size="24" font-weight="700" fill="#161616">Dashboard + QPUs</text>
+      <text x="24" y="96" font-size="15" fill="#525252">Token, resource quota, queues, chip status.</text>
+      <circle cx="292" cy="42" r="20" fill="#24a148" opacity=".16"/><text x="292" y="48" text-anchor="middle" font-size="16" fill="#24a148">2</text>
+    </g>
+    <g transform="translate(520 150)">
+      <rect width="330" height="120" fill="#fff" stroke="#c6c6c6"/>
+      <text x="24" y="36" font-size="13" fill="#6f6f6f">COMPOSER</text>
+      <text x="24" y="68" font-size="24" font-weight="700" fill="#161616">Build a circuit</text>
+      <text x="24" y="96" font-size="15" fill="#525252">Gate palette, qubit wires, OpenQASM, state view.</text>
+    </g>
+    <g transform="translate(150 310)">
+      <rect width="330" height="120" fill="#fff" stroke="#c6c6c6"/>
+      <text x="24" y="36" font-size="13" fill="#6f6f6f">TASKS</text>
+      <text x="24" y="68" font-size="24" font-weight="700" fill="#161616">Track results</text>
+      <text x="24" y="96" font-size="15" fill="#525252">Task id, task name, chip, status, submit time.</text>
+    </g>
+    <g transform="translate(520 310)">
+      <rect width="330" height="120" fill="#fff" stroke="#c6c6c6"/>
+      <text x="24" y="36" font-size="13" fill="#6f6f6f">USER / JUPYTER</text>
+      <text x="24" y="68" font-size="24" font-weight="700" fill="#161616">Account tools</text>
+      <text x="24" y="96" font-size="15" fill="#525252">Profile, JupyterLab server, password update.</text>
+    </g>
+  </g>
+</svg>

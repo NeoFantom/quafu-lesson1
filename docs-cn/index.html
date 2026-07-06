@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quafu 官方文档中文导读</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../" style="border:0">Quafu <span>Docs CN</span></a><div class="tag">OFFICIAL DOCS GUIDE</div><div class="navlinks"><a href="../">返回教程</a><button id="themeBtn" class="theme" onclick="toggleTheme()">◐</button></div></div></nav><header class="hero"><div class="wrap"><div class="eyebrow">Quafu ReadTheDocs · Chinese guide</div><h1>Quafu 官方文档中文导读。</h1><p class="lead">根据 Quafu ReadTheDocs 当前 Home 页整理，面向 Lesson 1 学员，保留关键 API、参数与安全提醒。完整英文来源见 <a href="https://quafu-sqc.readthedocs.io/en/latest/">官方文档</a>。</p></div></header><main><section><div class="wrap"><h2>1. 你今天要学会什么</h2><p>Lesson 1 的目标是跑通 Quafu 的最小工作流：安装 QuarkStudio，用自己的 Quafu token 初始化任务管理器，查看后端队列，提交一个 OpenQASM 2.0 电路，保存任务 id，并取回测量结果。</p><h2>2. 安装 QuarkStudio</h2><p>官方文档说明 QuarkStudio 支持 Windows、macOS 和 Linux，并要求 Python <code>&gt;=3.12</code>。</p><pre><code>pip install quarkstudio</code></pre><p>课堂建议：先确认 Python 版本，再安装。安装完成后，后续 Python 脚本会通过 <code>quark</code> 包里的 <code>Task</code> 类与 Quafu 后端交互。</p><h2>3. 准备 token：只用占位符，不写真实值</h2><pre><code>from quark import Task
+
+tmgr = Task("YOUR_QUAFU_TOKEN")</code></pre><p>token 是个人验证密钥，不能发到群里、不能写进公开代码、也不能提交到仓库。官方文档说明 token 有效期为 30 天；过期后需要重新申请。</p><h2>4. 先看后端状态，再决定提交到哪里</h2><pre><code>print(tmgr.status())</code></pre><p>返回值通常是一个字典。后端名后面的数字表示当前队列里还有多少任务；<code>Offline</code> 表示暂不可用；<code>Maintenance</code> 表示维护中。课堂上优先选择排队少、状态正常的后端。</p><h2>5. 准备一个 OpenQASM 2.0 电路</h2><p>官方文档使用 OpenQASM 2.0 字符串提交任务。课堂版建议使用索引自洽的示例：</p><div class="note good"><span class="lab">OpenQASM lint</span><p>OpenQASM 3 官方 ANTLR 参考语法可检查代码是否 parseable；这里的 OpenQASM 2.0 字符串可用 <code>qiskit.qasm2.loads(circuit)</code> 做解析检查，页面会显示 lint badge。</p></div><pre><code>circuit = """
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[6];
+creg meas[4];
+h q[2];
+cx q[2],q[3];
+cx q[3],q[4];
+cx q[4],q[5];
+measure q[2] -&gt; meas[0];
+measure q[3] -&gt; meas[1];
+measure q[4] -&gt; meas[2];
+measure q[5] -&gt; meas[3];
+"""</code></pre><h2>6. 组装任务并提交</h2><pre><code>task = {
+    "chip": "Dongling",
+    "name": "Lesson1Demo",
+    "circuit": circuit,
+    "shots": 1024,
+    "options": {
+        "compiler": "quarkcircuit",
+        "correct": False,
+        "open_dd": None,
+        "target_qubits": []
+    }
+}
+
+tid = tmgr.run(task)
+print("task id:", tid)</code></pre><p>Quafu 的任务提交是异步的：<code>tmgr.run(task)</code> 返回任务 id 后，程序不需要一直等待硬件执行完成。请务必保存 <code>tid</code>，后面取结果要用它。</p><h2>7. 用任务 id 取回结果</h2><pre><code>res = tmgr.result(tid)
+print(res["status"])
+print(res["count"])</code></pre><div class="tablewrap"><table><thead><tr><th>字段</th><th>含义</th></tr></thead><tbody><tr><td><code>count</code></td><td>各测量 bitstring 出现的次数。</td></tr><tr><td><code>corrected</code></td><td>如开启校正，可能包含校正后的结果。</td></tr><tr><td><code>transpiled</code></td><td>实际下发到后端前的转译电路。</td></tr><tr><td><code>status</code></td><td>任务状态。</td></tr><tr><td><code>error</code></td><td>错误信息。</td></tr><tr><td><code>qlisp</code></td><td>便于调试的电路描述。</td></tr></tbody></table></div><h2>8. 第一课检查清单</h2><ul class="checklist"><li>已安装 Python <code>&gt;=3.12</code>。</li><li>已安装 QuarkStudio。</li><li>有自己的 Quafu token，但没有把真实 token 写进文件。</li><li>会用 <code>tmgr.status()</code> 查看后端队列。</li><li>会提交一个小型 OpenQASM 2.0 任务。</li><li>保存了任务 id。</li><li>会用 <code>tmgr.result(tid)</code> 读取 <code>status</code> 和 <code>count</code>。</li></ul><h2>9. 技术支持</h2><p>官方文档列出的技术支持邮箱：<code>quafu_ts@baqis.ac.cn</code>。</p><p class="src">本页来源：<a href="https://quafu-sqc.readthedocs.io/en/latest/">https://quafu-sqc.readthedocs.io/en/latest/</a>；原始抓取保存在 <code>sources/raw/quafu-docs/</code> 与 <code>sources/raw/docs/</code>。</p></div></section></main><footer class="footer"><div class="wrap"><p><a href="../">Back to Quafu Lesson 1</a></p></div></footer><div id="pager"><button onclick="pagePrev()">↑</button><span id="pageInd">1 / 1</span><button onclick="pageNext()">↓</button></div><div id="modal" onclick="closeModal()"><button class="close"></button><div class="inner" id="modalInner" onclick="event.stopPropagation()"></div></div><script src="../assets/js/app.js"></script></body></html>
