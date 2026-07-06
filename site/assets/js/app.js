@@ -5,7 +5,7 @@ function zoomFig(el){const node=el&&el.querySelector('img,svg');const inner=docu
 function closeModal(){document.getElementById('modal').classList.remove('on')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 (function(){const slides=[...document.querySelectorAll('.hero, section h2, section h3')];const ind=document.getElementById('pageInd');if(!slides.length)return;function cur(){const mid=innerHeight*.42;let best=0,bd=1e9;slides.forEach((s,i)=>{const d=Math.abs(s.getBoundingClientRect().top-mid);if(d<bd){bd=d;best=i}});return best}function set(i){if(ind)ind.textContent=(i+1)+' / '+slides.length}function go(i){i=Math.max(0,Math.min(slides.length-1,i));if(slides[i].classList.contains('hero'))scrollTo({top:0,behavior:'smooth'});else slides[i].scrollIntoView({behavior:'smooth',block:'center'});set(i)}window.pageNext=()=>go(cur()+1);window.pagePrev=()=>go(cur()-1);document.addEventListener('keydown',e=>{if(/^(input|textarea|select)$/i.test(e.target.tagName))return;if(document.getElementById('modal').classList.contains('on'))return;if(e.key===' '){e.preventDefault();e.shiftKey?pagePrev():pageNext()}else if(e.key==='PageDown'){e.preventDefault();pageNext()}else if(e.key==='PageUp'){e.preventDefault();pagePrev()}});let t;addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>set(cur()),80)},{passive:true});set(0)})();
-(function(){const dock=document.getElementById('sideDock');const sections=[...document.querySelectorAll('section[id]')];const links=[...document.querySelectorAll('.side-toc a[data-section]')];if(!dock||!sections.length||!links.length)return;function updateSideDock(){const y=scrollY||document.documentElement.scrollTop;const scrolled=y>110;dock.classList.toggle('on',scrolled);document.documentElement.classList.toggle('chrome-scrolled',scrolled);let current=sections[0].id;for(const section of sections){if(section.getBoundingClientRect().top<=innerHeight*.34)current=section.id}links.forEach(a=>a.classList.toggle('active',a.dataset.section===current))}addEventListener('scroll',updateSideDock,{passive:true});addEventListener('resize',updateSideDock);updateSideDock()})();
+(function(){const dock=document.getElementById('sideDock');const sections=[...document.querySelectorAll('section[id]')];const links=[...document.querySelectorAll('.side-toc a[data-section]')];if(!dock||!sections.length||!links.length)return;function updateSideDock(){const y=scrollY||document.documentElement.scrollTop;const on=y>110;const landed=y>246||innerWidth<=1280;dock.classList.toggle('on',on);dock.classList.toggle('landed',on&&landed);document.documentElement.classList.toggle('chrome-scrolled',on&&landed);let current=sections[0].id;for(const section of sections){if(section.getBoundingClientRect().top<=innerHeight*.34)current=section.id}links.forEach(a=>a.classList.toggle('active',a.dataset.section===current))}addEventListener('scroll',updateSideDock,{passive:true});addEventListener('resize',updateSideDock);updateSideDock()})();
 (function(){
   const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
   const hit=(s,re,cls)=>s.replace(re,m=>`<span class="${cls}">${m}</span>`);
@@ -47,16 +47,20 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   if(!heroLogo||!floating||!sideLogo)return;
   const clamp=x=>Math.max(0,Math.min(1,x));
   function updateLogo(){
-    if(innerWidth<=1280){floating.style.opacity='0';return}
-    const p=clamp(((scrollY||document.documentElement.scrollTop)-36)/210);
-    if(p<=0||p>=.99){floating.style.opacity='0';return}
+    const y=scrollY||document.documentElement.scrollTop;
+    if(innerWidth<=1280){floating.style.opacity='0';document.documentElement.classList.remove('logo-flying');return}
+    const start=36, end=246;
+    const p=clamp((y-start)/(end-start));
+    const flying=p>0&&p<1;
+    document.documentElement.classList.toggle('logo-flying',flying);
+    if(!flying){floating.style.opacity='0';return}
     const h=heroLogo.getBoundingClientRect();
     const t=sideLogo.getBoundingClientRect();
     const x=h.left+(t.left-h.left)*p;
-    const y=h.top+(t.top-h.top)*p;
+    const yPos=h.top+(t.top-h.top)*p;
     const scale=1+(0.86-1)*p;
-    floating.style.opacity=String(Math.sin(p*Math.PI));
-    floating.style.transform=`translate(${x}px, ${y}px) scale(${scale})`;
+    floating.style.opacity='1';
+    floating.style.transform=`translate(${x}px, ${yPos}px) scale(${scale})`;
   }
   addEventListener('scroll',updateLogo,{passive:true});
   addEventListener('resize',updateLogo);

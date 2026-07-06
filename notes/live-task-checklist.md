@@ -25,6 +25,13 @@ Rule for this project: whenever a new request arrives, add it here before contin
 - [x] Final verification after the marker pass: run validation, scan public text, inspect representative screenshots, commit, push, deploy, and check GitHub Pages build.
   - Evidence: `npm run validate` passed; public text scan passed; representative browser screenshots inspected; master commit `e3cf407` pushed; gh-pages commit `7141838` built; live entry thumbnails and stable register asset returned HTTP 200.
 
+
+- [x] Hero logo transition: make the logo visually lift off from the hero position and land at the side-logo position as one object.
+  - Rule: once lift-off starts, hide the original hero logo.
+  - Rule: show/fix the side logo only after landing.
+  - Rule: avoid the visual impression of two logos splitting or duplicating.
+  - Evidence: CDP state probe at scrollY 0/80/170/270 shows hero/floating/side opacities as 1/0/0, 0/1/0, 0/1/0, and 0/0/1.
+
 ## Completed earlier in this session
 
 - [x] OMX team run finished and shut down.
