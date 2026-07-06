@@ -22,7 +22,8 @@ Rule for this project: whenever a new request arrives, add it here before contin
   - Rule: for large rectangles, place the number circle at the top-edge center of the rectangle.
   - Rule: for short controls or boxes close to marker-circle height, place the full circle above the box so the control stays visible.
   - Evidence: `scripts/annotate-screenshots.py` now uses `marker_anchor_for_rect`; regenerated `00-register.png` through `07-chip-detail.png`.
-- [ ] Final verification after the marker pass: run validation, scan public text, inspect representative screenshots, commit, push, deploy, and check GitHub Pages build.
+- [x] Final verification after the marker pass: run validation, scan public text, inspect representative screenshots, commit, push, deploy, and check GitHub Pages build.
+  - Evidence: `npm run validate` passed; public text scan passed; representative browser screenshots inspected; master commit `e3cf407` pushed; gh-pages commit `7141838` built; live entry thumbnails and stable register asset returned HTTP 200.
 
 ## Completed earlier in this session
 
