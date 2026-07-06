@@ -19,6 +19,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 BAR_H = 56
 PANEL_W = 430
+MARKER_R = 24
+MARKER_SCALE = 4
 BLUE = (15, 98, 254)
 BLUE_D = (0, 67, 206)
 ORANGE = (255, 171, 45)
@@ -69,12 +71,23 @@ def rounded(draw, box, radius, fill, outline=None, width=1):
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
 
-def marker(draw: ImageDraw.ImageDraw, x: int, y: int, n: int):
-    r = 18
-    draw.ellipse((x - r, y - r, x + r, y + r), fill=BLUE, outline=WHITE, width=3)
+def marker(canvas: Image.Image, x: int, y: int, n: int, r: int = MARKER_R):
+    """Draw a supersampled numbered marker centered at (x, y)."""
+    pad = 5
+    size = (r + pad) * 2
+    scale = MARKER_SCALE
+    overlay = Image.new("RGBA", (size * scale, size * scale), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    cx = cy = (r + pad) * scale
+    rr = r * scale
+    od.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=(*BLUE, 255), outline=(*WHITE, 255), width=4 * scale)
+
     s = str(n)
-    tw, th = text_size(draw, s, num_font)
-    draw.text((x - tw / 2, y - th / 2 - 1), s, font=num_font, fill=WHITE)
+    font = ImageFont.truetype(FONT_SANS_BOLD, 27 * scale)
+    bx0, by0, bx1, by1 = od.textbbox((0, 0), s, font=font)
+    od.text((cx - (bx0 + bx1) / 2, cy - (by0 + by1) / 2 - scale), s, font=font, fill=(*WHITE, 255))
+    overlay = overlay.resize((size, size), Image.Resampling.LANCZOS)
+    canvas.paste(overlay, (round(x - size / 2), round(y - size / 2)), overlay)
 
 
 def mask_box(draw, box, text=None):
@@ -107,26 +120,23 @@ def annotate(raw: Path, out_name: str, url: str, callouts: list[dict], masks: li
         mask_box(draw, (x1, y1 + BAR_H, x2, y2 + BAR_H), text)
 
     label_y = BAR_H + 78
-    label_centers = []
     for idx, c in enumerate(callouts, start=1):
         label_h = 120 if len(c.get("body", "")) > 22 else 100
         top = label_y
         rounded(draw, (px + 24, top, w + PANEL_W - 24, top + label_h), 14, WHITE, BORDER, 1)
-        marker(draw, px + 52, top + 34, idx)
+        marker(canvas, px + 56, top + 38, idx)
         draw.text((px + 82, top + 18), c["title"], font=title_font, fill=BLACK)
         draw_wrapped(draw, (px + 82, top + 52), c.get("body", ""), body_font, GRAY, max_px=PANEL_W-130)
-        label_centers.append((px + 24, top + label_h // 2))
         label_y += label_h + 16
 
     for idx, c in enumerate(callouts, start=1):
-        tx, ty = c["xy"]
-        tx2, ty2 = tx, ty + BAR_H
         if rect := c.get("rect"):
             x1, y1, x2, y2 = rect
             draw.rectangle((x1, y1 + BAR_H, x2, y2 + BAR_H), outline=ORANGE, width=4)
-        marker(draw, tx2, ty2, idx)
-        lx, ly = label_centers[idx - 1]
-        draw.line((tx2 + 22, ty2, lx, ly), fill=ORANGE, width=3)
+            tx, ty = (x1 + x2) / 2, y1
+        else:
+            tx, ty = c["xy"]
+        marker(canvas, int(round(tx)), int(round(ty + BAR_H)), idx)
 
     out = OUT / out_name
     # Palette only for large photographic public register page.
