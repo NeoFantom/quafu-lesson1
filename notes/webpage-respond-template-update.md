@@ -22,3 +22,13 @@ Validation evidence:
 - Codex and Claude `SKILL.md` files are byte-identical after synchronization.
 - A structural assertion checked required headings, OpenQASM guidance, optional navigation modules, and the forbidden Chinese contrast phrasing.
 - The bundled `quick_validate.py` flags the pre-existing local custom frontmatter key `disable-model-invocation`; that key was retained to avoid changing runtime behavior outside this template update.
+
+## 2026-07-06 theme toggle follow-up
+
+Neo confirmed the template should support light/dark themes by default. The Codex and Claude `webpage-respond` skill files were updated again so every generated page includes:
+
+- Light and dark CSS custom-property palettes.
+- A visible theme toggle button.
+- First-load `prefers-color-scheme` handling.
+- `localStorage` persistence after manual switching.
+- Explicit validation requirements for code blocks, figures, modals, cards, and navigation in both themes.
