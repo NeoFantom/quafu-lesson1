@@ -97,6 +97,25 @@ def mask_box(draw, box, text=None):
         draw.text((box[0] + (box[2] - box[0] - tw) / 2, box[1] + (box[3] - box[1] - th) / 2 - 2), text, font=mask_font, fill=GRAY)
 
 
+def marker_anchor_for_rect(rect: tuple[int, int, int, int]) -> tuple[int, int]:
+    """Return screenshot-space marker center for a highlighted rectangle.
+
+    Large UI regions get the marker centered on the top edge. Short controls get
+    the full marker circle above the rectangle so the control remains readable.
+    """
+    x1, y1, x2, y2 = rect
+    cx = round((x1 + x2) / 2)
+    rect_h = y2 - y1
+    if rect_h <= MARKER_R * 2 + 16:
+        above_y = round(y1 - MARKER_R - 8)
+        # Keep the whole marker inside the screenshot area; if the control is too
+        # close to the top, put the marker below the control instead.
+        if above_y < MARKER_R + 3:
+            return cx, round(y2 + MARKER_R + 8)
+        return cx, above_y
+    return cx, y1
+
+
 def annotate(raw: Path, out_name: str, url: str, callouts: list[dict], masks: list[tuple[tuple[int, int, int, int], str | None]] | None = None):
     im = Image.open(raw).convert("RGB")
     w, h = im.size
@@ -133,9 +152,9 @@ def annotate(raw: Path, out_name: str, url: str, callouts: list[dict], masks: li
         if rect := c.get("rect"):
             x1, y1, x2, y2 = rect
             draw.rectangle((x1, y1 + BAR_H, x2, y2 + BAR_H), outline=ORANGE, width=4)
-            tx, ty = (x1 + x2) / 2, y1
+            tx, ty = c.get("marker_xy") or marker_anchor_for_rect(rect)
         else:
-            tx, ty = c["xy"]
+            tx, ty = c.get("marker_xy") or c["xy"]
         marker(canvas, int(round(tx)), int(round(ty + BAR_H)), idx)
 
     out = OUT / out_name
@@ -152,7 +171,7 @@ def main():
         {"title": "输入邮箱", "body": "用户名在上方填写，邮箱用于激活和找回密码。", "xy": (540, 396), "rect": (520, 376, 920, 414)},
         {"title": "设置密码", "body": "填写 Password 和 Confirm password。", "xy": (540, 458), "rect": (520, 438, 920, 538)},
         {"title": "发送验证邮件", "body": "点击 Sign Up，系统向邮箱发送激活链接。", "xy": (720, 582), "rect": (520, 562, 920, 602)},
-        {"title": "去邮箱激活", "body": "打开邮件中的激活链接，再回到登录页。", "xy": (720, 646), "rect": (615, 636, 850, 654)},
+        {"title": "去邮箱激活", "body": "打开邮件中的激活链接，再回到登录页。", "xy": (720, 646), "rect": (615, 636, 850, 654), "marker_xy": (732, 690)},
     ])
     annotate(PLATFORM_RAW / "home-raw.png", "01-home-dashboard.png", "https://quafu-sqc.baqis.ac.cn/framework/home", [
         {"title": "看资源状态", "body": "Statistics 显示额度、token 有效期和 Jupyter 状态。", "xy": (150, 188), "rect": (64, 158, 596, 300)},
@@ -166,10 +185,10 @@ def main():
         {"title": "看输出态", "body": "下方图表用于建立模拟输出的直觉。", "xy": (460, 470), "rect": (300, 396, 1306, 672)},
     ], masks=[((0, 399, 50, 472), None)])
     annotate(PLATFORM_RAW / "tasks-raw.png", "03-tasks.png", "https://quafu-sqc.baqis.ac.cn/framework/tasks", [
-        {"title": "按 Task ID 查找", "body": "任务提交后保存 task id，优先用它定位记录。", "xy": (170, 28), "rect": (82, 16, 310, 48)},
+        {"title": "按 Task ID 查找", "body": "任务提交后保存 task id，优先用它定位记录。", "xy": (170, 28), "rect": (82, 16, 310, 48), "marker_xy": (196, 82)},
         {"title": "刷新状态", "body": "点击右上角刷新或搜索，更新异步任务状态。", "xy": (1215, 30), "rect": (1180, 16, 1260, 48)},
         {"title": "处理 token 过期", "body": "看到过期提示时回 Home 刷新 token。", "xy": (720, 90), "rect": (470, 50, 970, 110)},
-        {"title": "空列表状态", "body": "首次运行前列表可为空，提交后再回来看状态。", "xy": (178, 124), "rect": (70, 108, 358, 140)},
+        {"title": "空列表状态", "body": "首次运行前列表可为空，提交后再回来看状态。", "xy": (178, 124), "rect": (70, 108, 358, 140), "marker_xy": (214, 172)},
     ], masks=[((0, 399, 50, 472), None)])
     annotate(PLATFORM_RAW / "user-raw.png", "04-user.png", "https://quafu-sqc.baqis.ac.cn/framework/user", [
         {"title": "用户信息", "body": "只说明入口作用，截图和共享屏幕隐藏个人信息。", "xy": (100, 28), "rect": (70, 16, 150, 40)},
