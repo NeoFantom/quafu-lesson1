@@ -17,11 +17,18 @@ const required = [
   'site/assets/screenshots/03-tasks.png',
   'site/assets/screenshots/04-user.png',
   'site/assets/screenshots/05-jupyter.png',
+  'site/assets/screenshots/06-public-home.png',
+  'site/assets/screenshots/07-chip-detail.png',
   'notes/quafu-official-docs-inventory.md',
   'notes/platform-ui-inventory.md',
   'notes/reference-design-extract.md',
   'notes/tutorial-outline.md',
-  'sources/processed/platform-ui-participant-features.json'
+  'sources/processed/platform-ui-participant-features.json',
+  'scripts/annotate-screenshots.py',
+  'notes/stable-assets.md',
+  'sources/raw/public-home-screens/home-raw.png',
+  'sources/raw/public-home-screens/chip-detail-raw.png',
+  'sources/raw/public-home-screens/register-raw.png'
 ];
 const forbiddenPublicTerms = [
   '\u5938\u7236',        // Chinese platform name; public copy must use Quafu only.
@@ -35,6 +42,7 @@ const forbiddenPublicTerms = [
   'registration system'
 ];
 const requiredLessonKeywords = ['QuarkStudio','tmgr.status','tmgr.run','tmgr.result','Composer','Tasks','Jupyter'];
+const stablePublicAssets = ['site/assets/screenshots/00-register.png'];
 function walk(dir){
   const out=[];
   for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
@@ -91,6 +99,9 @@ for(const file of publicFiles){
 const index=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
 for(const must of requiredLessonKeywords){
   if(!index.includes(must)) fail(`missing tutorial keyword ${must}`);
+}
+for(const rel of stablePublicAssets){
+  if(!fs.existsSync(path.join(root, rel))) fail(`missing stable public asset ${rel}`);
 }
 if(ok){
   pass('public site files exist');

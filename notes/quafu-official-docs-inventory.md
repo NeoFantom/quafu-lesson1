@@ -42,5 +42,5 @@ The official ReadTheDocs site currently exposes a single lesson-relevant MkDocs 
 
 ## Natural Chinese summary for Lesson 1
 
-Quafu 的第一课应让学员完成一条最短闭环：安装 QuarkStudio，准备自己的 Quafu API token，查看后端排队状态，提交一个 OpenQASM 2.0 小电路，保存返回的任务 id，再用任务 id 取回测量计数与运行状态。教学重点不是一次讲完全部硬件细节，而是让学员理解云端量子任务的工作流：**写电路 → 选后端 → 提交异步任务 → 等待队列执行 → 拉取结果 → 解读 counts**。
+Quafu 的第一课应让学员完成一条最短闭环：安装 QuarkStudio，准备自己的 Quafu API token，查看后端排队状态，提交一个 OpenQASM 2.0 小电路，保存返回的任务 id，再用任务 id 取回测量计数与运行状态。教学重点是让学员理解云端量子任务的工作流：**写电路 → 选后端 → 提交异步任务 → 等待队列执行 → 拉取结果 → 解读 counts**。
 
