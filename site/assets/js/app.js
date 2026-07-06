@@ -5,7 +5,7 @@ function zoomFig(el){const node=el&&el.querySelector('img,svg');const inner=docu
 function closeModal(){document.getElementById('modal').classList.remove('on')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 (function(){const slides=[...document.querySelectorAll('.hero, section h2, section h3')];const ind=document.getElementById('pageInd');if(!slides.length)return;function cur(){const mid=innerHeight*.42;let best=0,bd=1e9;slides.forEach((s,i)=>{const d=Math.abs(s.getBoundingClientRect().top-mid);if(d<bd){bd=d;best=i}});return best}function set(i){if(ind)ind.textContent=(i+1)+' / '+slides.length}function go(i){i=Math.max(0,Math.min(slides.length-1,i));if(slides[i].classList.contains('hero'))scrollTo({top:0,behavior:'smooth'});else slides[i].scrollIntoView({behavior:'smooth',block:'center'});set(i)}window.pageNext=()=>go(cur()+1);window.pagePrev=()=>go(cur()-1);document.addEventListener('keydown',e=>{if(/^(input|textarea|select)$/i.test(e.target.tagName))return;if(document.getElementById('modal').classList.contains('on'))return;if(e.key===' '){e.preventDefault();e.shiftKey?pagePrev():pageNext()}else if(e.key==='PageDown'){e.preventDefault();pageNext()}else if(e.key==='PageUp'){e.preventDefault();pagePrev()}});let t;addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>set(cur()),80)},{passive:true});set(0)})();
-(function(){const dock=document.getElementById('sideDock');const sections=[...document.querySelectorAll('section[id]')];const links=[...document.querySelectorAll('.side-toc a[data-section]')];if(!dock||!sections.length||!links.length)return;function updateSideDock(){const y=scrollY||document.documentElement.scrollTop;const on=y>110;const landed=y>246||innerWidth<=1280;dock.classList.toggle('on',on);dock.classList.toggle('landed',on&&landed);document.documentElement.classList.toggle('chrome-scrolled',on&&landed);let current=sections[0].id;for(const section of sections){if(section.getBoundingClientRect().top<=innerHeight*.34)current=section.id}links.forEach(a=>a.classList.toggle('active',a.dataset.section===current))}addEventListener('scroll',updateSideDock,{passive:true});addEventListener('resize',updateSideDock);updateSideDock()})();
+(function(){const dock=document.getElementById('sideDock');const sections=[...document.querySelectorAll('section[id]')];const links=[...document.querySelectorAll('.side-toc a[data-section]')];if(!dock||!sections.length||!links.length)return;function updateSideDock(){const y=scrollY||document.documentElement.scrollTop;if(innerWidth<=1280){const on=y>110;dock.classList.toggle('on',on);dock.classList.toggle('landed',on);document.documentElement.classList.toggle('chrome-scrolled',on);document.documentElement.classList.remove('logo-flying')}let current=sections[0].id;for(const section of sections){if(section.getBoundingClientRect().top<=innerHeight*.34)current=section.id}links.forEach(a=>a.classList.toggle('active',a.dataset.section===current))}addEventListener('scroll',updateSideDock,{passive:true});addEventListener('resize',updateSideDock);updateSideDock()})();
 (function(){
   const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
   const hit=(s,re,cls)=>s.replace(re,m=>`<span class="${cls}">${m}</span>`);
@@ -41,27 +41,25 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   }
 })();
 (function(){
+  const dock=document.getElementById('sideDock');
   const heroLogo=document.querySelector('.hero-logo');
   const floating=document.getElementById('floatingLogo');
   const sideLogo=document.querySelector('.side-logo');
-  if(!heroLogo||!floating||!sideLogo)return;
-  const clamp=x=>Math.max(0,Math.min(1,x));
-  function updateLogo(){
-    const y=scrollY||document.documentElement.scrollTop;
-    if(innerWidth<=1280){floating.style.opacity='0';document.documentElement.classList.remove('logo-flying');return}
-    const start=36, end=246;
-    const p=clamp((y-start)/(end-start));
-    const flying=p>0&&p<1;
-    document.documentElement.classList.toggle('logo-flying',flying);
-    if(!flying){floating.style.opacity='0';return}
-    const h=heroLogo.getBoundingClientRect();
-    const t=sideLogo.getBoundingClientRect();
-    const x=h.left+(t.left-h.left)*p;
-    const yPos=h.top+(t.top-h.top)*p;
-    const scale=1+(0.86-1)*p;
-    floating.style.opacity='1';
-    floating.style.transform=`translate(${x}px, ${yPos}px) scale(${scale})`;
-  }
+  if(!dock||!heroLogo||!floating||!sideLogo)return;
+  const html=document.documentElement;
+  const launchAt=48,resetAt=14,duration=1000;
+  let state='home',anim=null,raf=0;
+  const tx=(x,y,s)=>`translate3d(${x}px, ${y}px, 0) scale(${s})`;
+  const ease=t=>1-Math.pow(1-t,3);
+  const bez=(a,b,c,t)=>{const u=1-t;return u*u*a+2*u*t*b+t*t*c};
+  function stopFlight(){if(anim){try{anim.cancel()}catch(e){}anim=null}if(raf){cancelAnimationFrame(raf);raf=0}}
+  function hideFloating(){floating.style.opacity='0';floating.style.transform='translate3d(-999px,-999px,0) scale(1)'}
+  function setHome(){stopFlight();state='home';dock.classList.remove('on','landed');html.classList.remove('logo-flying','chrome-scrolled');hideFloating()}
+  function setLanded(){stopFlight();state='landed';html.classList.remove('logo-flying');html.classList.add('chrome-scrolled');dock.classList.add('on','landed');hideFloating()}
+  function finalTarget(){const prev=dock.style.transition;dock.style.transition='none';dock.classList.add('on');dock.classList.remove('landed');dock.offsetHeight;const rect=sideLogo.getBoundingClientRect();dock.style.transition=prev;return rect}
+  function fallback(start,mid,end){const startTime=performance.now();function frame(now){const p=Math.min(1,(now-startTime)/duration);const e=ease(p);const x=bez(start.x,mid.x,end.x,e);const y=bez(start.y,mid.y,end.y,e);const scale=p<.5?1+(1.28-1)*(p/.5):1.28+(0.86-1.28)*((p-.5)/.5);floating.style.opacity=p>.94?String(1-(p-.94)/.06):'1';floating.style.transform=tx(x,y,scale);if(p<1)raf=requestAnimationFrame(frame);else setLanded()}raf=requestAnimationFrame(frame)}
+  function startFlight(){if(state==='flying'||state==='landed')return;stopFlight();state='flying';dock.classList.add('on');dock.classList.remove('landed');html.classList.add('logo-flying');html.classList.remove('chrome-scrolled');const h=heroLogo.getBoundingClientRect();const t=finalTarget();const start={x:h.left,y:h.top},end={x:t.left,y:t.top};const dip=Math.min(240,Math.max(128,innerHeight*.2));const mid={x:start.x+(end.x-start.x)*.56,y:Math.max(start.y,end.y)+dip};floating.style.opacity='1';floating.style.transform=tx(start.x,start.y,1);const frames=[{opacity:0,transform:tx(start.x,start.y,1),offset:0,easing:'ease-out'},{opacity:1,transform:tx(start.x,start.y,1),offset:.04,easing:'cubic-bezier(.18,.86,.24,1)'},{opacity:1,transform:tx(mid.x,mid.y,1.28),offset:.5,easing:'cubic-bezier(.3,0,.2,1)'},{opacity:1,transform:tx(end.x,end.y,.86),offset:.92,easing:'ease-in'},{opacity:0,transform:tx(end.x,end.y,.86),offset:1}];if(floating.animate){anim=floating.animate(frames,{duration,easing:'linear',fill:'forwards'});anim.onfinish=()=>{anim=null;if(state==='flying')setLanded()};anim.oncancel=()=>{};return}fallback(start,mid,end)}
+  function updateLogo(){const y=scrollY||document.documentElement.scrollTop;if(innerWidth<=1280){stopFlight();hideFloating();html.classList.remove('logo-flying');state=y>110?'landed':'home';return}if(y<=resetAt){if(state!=='home')setHome();return}if(y>launchAt&&state==='home')startFlight()}
   addEventListener('scroll',updateLogo,{passive:true});
   addEventListener('resize',updateLogo);
   updateLogo();

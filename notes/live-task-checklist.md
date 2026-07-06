@@ -39,3 +39,10 @@ Rule for this project: whenever a new request arrives, add it here before contin
 - [x] QR code asset added and published.
 - [x] Jupyter `demo.ipynb` screenshot added.
 - [x] Stable asset rule preserved for `site/assets/screenshots/00-register.png`.
+
+- [x] Hero logo flight: change the transition into a fixed 1s animation that launches from below, grows first, then shrinks into the side-logo position.
+  - Rule: animation duration is time-based, not scroll-position-bound; if scrolling stops midway, the logo must keep flying and land.
+  - Rule: keep the frame update smooth by using browser-native animation frames/CSS transitions.
+  - Evidence: `site/assets/js/app.js` uses a `duration=1000` Web Animations flight with midpoint scale `1.28` and a lower arc; CDP smoke shows the page stopped at scrollY≈70 while the logo stayed `logo-flying` at 120ms and 640ms, then landed with `chrome-scrolled` at 1260ms.
+- [x] Jupyter demo screenshot: replace the `demo.ipynb` screenshot with the real screenshot named `Screenshot 2026-07-07 022730.png` from the user's Windows screenshots folder if available locally.
+  - Evidence: `site/assets/screenshots/08-jupyter-demo.png` was regenerated from `/mnt/c/Users/Neo/Pictures/Screenshots/Screenshot 2026-07-07 022730.png` at 2556×1226; the visible token literal was redacted for the public page while preserving the real JupyterLab screenshot.
