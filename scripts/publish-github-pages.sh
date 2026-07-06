@@ -12,6 +12,7 @@ fi
 rm -rf /tmp/quafu-lesson-pages
 mkdir -p /tmp/quafu-lesson-pages
 cp -R site/. /tmp/quafu-lesson-pages/
+touch /tmp/quafu-lesson-pages/.nojekyll
 git -C /tmp/quafu-lesson-pages init
 git -C /tmp/quafu-lesson-pages checkout -b gh-pages
 git -C /tmp/quafu-lesson-pages add -A
