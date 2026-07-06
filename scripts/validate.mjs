@@ -11,6 +11,7 @@ const required = [
   'site/assets/js/app.js',
   'site/assets/images/platform-map.svg',
   'site/assets/images/quafu-workflow.svg',
+  'site/assets/screenshots/00-register.png',
   'site/assets/screenshots/01-home-dashboard.png',
   'site/assets/screenshots/02-composer.png',
   'site/assets/screenshots/03-tasks.png',
